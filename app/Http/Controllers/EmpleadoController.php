@@ -59,8 +59,8 @@ class EmpleadoController extends Controller
             'empleado' => 'required|numeric',
             'nombre' => 'required|string',
        
-            'Ocupation' => 'required|string',
-            'Sala' => 'required|string',
+            'puesto' => 'required|string',
+            'sala' => 'required|string',
             'email' => 'required|email',
             'telefono' => 'nullable|string',
             'cursopa' => 'nullable|string',
@@ -87,8 +87,8 @@ class EmpleadoController extends Controller
         $empleado->empleado = $request->empleado;
         $empleado->nombre = $request->nombre;
       
-        $empleado->puesto = $request->Ocupation;
-        $empleado->sala = $request->Sala;
+        $empleado->puesto = $request->puesto;
+        $empleado->sala = $request->sala;
         $empleado->email = $request->email;
         $empleado->telefono = $request->telefono;
         $empleado->cursopa = $request->cursopa;
@@ -184,7 +184,6 @@ class EmpleadoController extends Controller
         $empleado->update([
             'empleado' => $request->empleado,
             'nombre' => $request->nombre,
-           
             'puesto' => $request->puesto,
             'sala' => $request->sala,
             'email' => $request->email,

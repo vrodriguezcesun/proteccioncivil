@@ -22,7 +22,7 @@
                                 </div>
                                 <div class="form-group col-md-6">
                                     <div class="col-sm-12 pl-0 pr-0">
-                                        <label for="nombre" class="col-sm-12 pl-0 pr-0">Nombre Completo</label>
+                                        <label for="" class="col-sm-12 pl-0 pr-0">Nombre Completo</label>
                                         <input type="text" class="form-control" id="nombre" name="nombre" required>
                                     </div>
                                 </div>
@@ -41,11 +41,11 @@
                                 </div>
                                 <div class="form-group col-md-3">
                                     <div class="col-sm-12 pl-0 pr-0">
-                                        <label for="Numero" class="col-sm-12 pl-0 pr-0">Puesto</label>
-                                        <select name="Sala" class="form-control">
+                                        <label for="" class="col-sm-12 pl-0 pr-0">Puesto</label>
+                                        <select name="puesto" class="form-control">
                                             <option value="" selected disabled>Selecciona un Puesto</option>
                                             @foreach($puestos as $puesto)
-                                            <option value="{{ $puesto->id }}">{{ $puesto->nombre }}</option>
+                                            <option value="{{ $puesto->nombre }}">{{ $puesto->nombre }}</option>
                                             @endforeach
                                         </select>
 
@@ -54,11 +54,11 @@
                                 </div>
                                 <div class="form-group col-md-3">
                                     <div class="col-sm-12 pl-0 pr-0">
-                                        <label for="Numero" class="col-sm-12 pl-0 pr-0">Sala</label>
-                                        <select name="Sala" class="form-control">
+                                        <label for="" class="col-sm-12 pl-0 pr-0">Sala</label>
+                                        <select name="sala" class="form-control">
                                             <option value="" selected disabled>Selecciona una Sala</option>
                                             @foreach($salas as $sala)
-                                            <option value="{{ $sala->id }}">{{ $sala->nombre }}</option>
+                                            <option value="{{ $sala->nombre }}">{{ $sala->nombre }}</option>
                                             @endforeach
                                         </select>
 
