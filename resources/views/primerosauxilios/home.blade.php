@@ -15,8 +15,10 @@
 
   </main> -->
 <section id="main" class="main">
+  <br>
+  <br>
   <div class="section-header">
-    <h3 class="page_heading">DashBoard principal</h3>
+    <h3 class="page_heading">Cursos</h3>
   </div>
   <div class="">
     <div class="row">
