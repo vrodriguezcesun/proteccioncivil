@@ -58,7 +58,6 @@ class EmpleadoController extends Controller
         $request->validate([
             'empleado' => 'required|numeric',
             'nombre' => 'required|string',
-       
             'puesto' => 'required|string',
             'sala' => 'required|string',
             'email' => 'required|email',
@@ -86,7 +85,6 @@ class EmpleadoController extends Controller
         $empleado = new Empleado();
         $empleado->empleado = $request->empleado;
         $empleado->nombre = $request->nombre;
-      
         $empleado->puesto = $request->puesto;
         $empleado->sala = $request->sala;
         $empleado->email = $request->email;
