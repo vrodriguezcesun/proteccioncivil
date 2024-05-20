@@ -1,6 +1,6 @@
 @extends('layouts.app',['pagina'=>'evaluacion'])
 @section('content')
-
+<div class="container">
 <main id="main" class="main">
     <div class="pagetitle">
         <nav>
@@ -83,6 +83,7 @@
             timer: 1500
         })
     </script>
+</div>
 </div>
 @endif
 
