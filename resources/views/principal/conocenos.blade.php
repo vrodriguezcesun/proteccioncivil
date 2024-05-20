@@ -9,11 +9,11 @@
             <div class="col-md-6">
               <div class="d-flex post-entry">
                 <div class="custom-thumbnail">
-                  <img src="{{asset('img/person_1.jpg')}}" alt="Image" class="img-fluid">
+                  <img src="{{asset('img/octavio.jpg')}}" alt="Image" class="img-fluid">
                 </div>
                 <div class="post-content">
-                  <h3>Sistemas de alarma de deteccion de incendio</h3>
-                  <div class="post-meta"><span>Director General:</span> Octavio Mendez Stoever</div>
+                  <h3>Direccion General de Proteccion Civil</h3>
+                  <div class="post-meta"><span>Lic:</span> Octavio Mendez Stoever</div>
                 </div>
               </div>
             </div>

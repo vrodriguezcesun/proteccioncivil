@@ -1,13 +1,11 @@
 @extends('layouts.app' ,['pagina'=>'plan'])
-
 @section('content')
-<div class="row">
     
 <div class="container">
     <div id="main2" class="main">
         <section>
             <div class="row">
-                <div class="col">
+            <div class="col-md-6">
                     <h2 class="modulo-title">Módulo 1: Primeros Auxilios.</h2>
                     <div class="tema">
                         <h3 class="tema-title">Tema 1: Revisión General</h3>
@@ -21,7 +19,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col-md-6">
                     <h2 class="modulo-title">Módulo 1: Primeros Auxilios.</h2>
                     <div class="tema">
                         <h3 class="tema-title">Tema 2: Reanimación Cardio-Pulmonar (RCP).</h3>
@@ -34,7 +32,7 @@
             </div>
 
             <div class="row">
-                <div class="col">
+            <div class="col-md-6">
 
                     <div class="tema">
                         <h3 class="tema-title">Tema 3: Atragamiento.</h3>
@@ -44,7 +42,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col-md-6">
 
                     <div class="tema">
                         <h3 class="tema-title">Tema 4: Intoxicacion de Quimicos.</h3>
@@ -57,7 +55,7 @@
             </div>
 
             <div class="row">
-                <div class="col">
+            <div class="col-md-6">
 
                 <div class="tema">
                 <h3 class="tema-title">Tema 5: Hemorragias.</h3>
@@ -70,7 +68,7 @@
                 </ul>
             </div>
                 </div>
-                <div class="col">
+                <div class="col-md-6">
 
                 <div class="tema">
                 <h3 class="tema-title">Tema 6: Golpes en la Cabeza.</h3>
@@ -83,7 +81,7 @@
             </div>
 
             <div class="row">
-                <div class="col">
+            <div class="col-md-6">
 
                 <div class="tema">
                 <h3 class="tema-title">Tema 7: Quemaduras.</h3>
@@ -93,7 +91,7 @@
                 </ul>
             </div>
                 </div>
-                <div class="col">
+                <div class="col-md-6">
 
                 <div class="tema">
                 <h3 class="tema-title">Tema 8: Fracturas.</h3>
@@ -105,7 +103,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col">
+            <div class="col-md-6">
 
                 <div class="tema">
                 <h3 class="tema-title">Tema 9: Convulsiones.</h3>
@@ -115,7 +113,7 @@
                 </ul>
             </div>
                 </div>
-                <div class="col">
+                <div class="col-md-6">
                 
                 </div>
             </div>
@@ -123,7 +121,7 @@
         </section>
     </div>
     </div>
-</div>
+
 
 
 

@@ -1,18 +1,12 @@
 @extends('layouts.app',['pagina'=>'evaluacion'])
 @section('content')
 <div class="container">
-<main id="main" class="main">
-    <div class="pagetitle">
-        <nav>
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item active">Dashboard</li>
-            </ol>
-        </nav>
-        <h1>Evaluacion del Lugar</h1>
-
-        <div class="">
-            <div class="">
+    <main id="main" class="main">
+        <div class="text-center">
+            <br>
+            <br>
+            <h1>Evaluacion del Lugar</h1>
+            <div class="embed-responsive embed-responsive-16by9">
                 <video id="miVideo" class="video-shadow" width="900" height="350" controls>
                     <source src="{{ asset('videos/revisiongeneral/Evaluaciondellugar.mp4') }}" type="video/mp4">
                 </video>
@@ -61,29 +55,29 @@
         </form>
 
         <a href="{{url('primerosauxilios/revisiongeneral/tecnicas')}}" class="btn btn-primary">Siguiente</a>
+
+
+        <script>
+            var player = videojs('miVideo');
+        </script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    </main>
+
+    <!-- Agrega el script de SweetAlert al final del cuerpo de la página -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    @if (session('success'))
+    <div class="center">
+        <script>
+            Swal.fire({
+                position: "center", // Centrar el mensaje en la página
+                icon: "success",
+                title: "Se ha enviado Correctamente",
+                showConfirmButton: false,
+                timer: 1500
+            })
+        </script>
     </div>
-
-    <script>
-        var player = videojs('miVideo');
-    </script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-</main>
-
-<!-- Agrega el script de SweetAlert al final del cuerpo de la página -->
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-@if (session('success'))
-<div class="center">
-    <script>
-        Swal.fire({
-            position: "center", // Centrar el mensaje en la página
-            icon: "success",
-            title: "Se ha enviado Correctamente",
-            showConfirmButton: false,
-            timer: 1500
-        })
-    </script>
-</div>
 </div>
 @endif
 
