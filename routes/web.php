@@ -27,7 +27,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/primerosauxilios/introduccion', [PrimerosAuxiliosController::class, 'introduccion']);
 Route::get('/primerosauxilios/plan', [PrimerosAuxiliosController::class, 'plan']);
 Route::get('primerosauxilios/revisiongeneral/evaluacion', [PrincipalController::class, 'evaluacion']);
-Route::resource('primerosauxilios/registrarse', RegistroController::class)->names('primerosauxilios');
+Route::resource('primerosauxilios/registrarse', RegistroController::class)->names('registro');
 
 Route::resource('/usuarios', UsuarioController::class)->names('usuarios');
 

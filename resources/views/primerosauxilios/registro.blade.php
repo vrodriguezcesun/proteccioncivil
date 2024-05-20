@@ -11,7 +11,7 @@
                             <div class="modal-header">
                                 <h3 class="modal-title">Información General</h3>
                             </div>
-                            <form method="POST" action="{{ route('empleados.store') }}">
+                            <form method="POST" action="{{ route('registro.store') }}">
                             @csrf
                                 <div class="row">
                                     <div class="form-group col-sm-6 col-md-4 col-lg-2">
@@ -23,7 +23,7 @@
                                         <input type="text" class="form-control" id="nombre" name="nombre" required>
                                     </div>
                                     <div class="form-group col-sm-12 col-md-6 col-lg-4">
-                                        <label for="email">Correo</label>
+                                        <label for="">Correo</label>
                                         <input type="email" class="form-control" id="email" name="email" required>
                                     </div>
                                 </div>

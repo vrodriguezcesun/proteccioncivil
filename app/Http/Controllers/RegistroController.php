@@ -33,20 +33,18 @@ class RegistroController extends Controller
           $request->validate([
             'empleado' => 'required|numeric',
             'nombre' => 'required|string',
-            'apellidos' => 'required|string',
-            'Ocupation' => 'required|string',
-            'Sala' => 'required|string',
             'email' => 'required|email',
+            'puesto' => 'required|string',
+            'sala' => 'required|string',
             'telefono' => 'required|string',
         ]);
         // Crear un nuevo objeto Empleado con los datos del formulario
         $empleado = new Empleado();
         $empleado->empleado = $request->empleado;
         $empleado->nombre = $request->nombre;
-        $empleado->apellido = $request->apellidos;
-        $empleado->puesto = $request->Ocupation;
-        $empleado->sala = $request->Sala;
         $empleado->email = $request->email;
+        $empleado->puesto = $request->puesto;
+        $empleado->sala = $request->sala;
         $empleado->telefono = $request->telefono;
 
         // Guardar el objeto en la base de datos
