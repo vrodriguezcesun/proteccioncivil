@@ -149,7 +149,7 @@
                                 </li>
                                 <li>
                                     <a class="{{$pagina == 'tecnicas' ? 'active' : ''}}" href="{{url ('primerosauxilios/revisiongeneral/tecnicas')}}">
-                                        <i class="bi bi-circle"></i><span>Tecinas ABC</span>
+                                        <i class="bi bi-circle"></i><span>Tecnicas ABC</span>
                                     </a>
                                 </li>
                                 <li>
@@ -168,7 +168,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="{{$pagina == 'oxigeno' ? 'active' : ''}}" href="{{url ('primerosauxilios/revisiongeneral/oxigeno')}}">
+                                    <a class="{{$pagina == 'oxigeno' ? 'active' : ''}}" href="{{url ('primerosauxilios/revisiongeneral/oxigenacion')}}">
                                         <i class="bi bi-circle"></i><span>Oxigeno en el Cuerpo</span>
                                     </a>
                                 </li>

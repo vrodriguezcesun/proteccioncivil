@@ -1,22 +1,27 @@
 @extends('layouts.app',['pagina'=>'evaluacion'])
 @section('content')
 <div class="container">
+    <br>
+    <br>
     <main id="main" class="main">
+        <h1 class="text-center">Evaluación del Lugar</h1>
+        <div class="mt-3"">
+                 <p class=" text-center">Duración: 2:13 Seg.</p>
+            <p class="justify-text">¡En este curso, aprenderás sobre la importancia de evaluar adecuadamente el lugar de una emergencia y cómo
+                realizar esta evaluación de manera efectiva para garantizar la seguridad y la eficiencia en la atención de
+                primeros auxilios.. ¡Te deseamos mucho éxito!</p>
+        </div>
+     
         <div class="text-center">
-            <br>
-            <br>
-            <h1>Evaluacion del Lugar</h1>
             <div class="embed-responsive embed-responsive-16by9">
-                <video id="miVideo" class="video-shadow" width="900" height="350" controls>
-                    <source src="{{ asset('videos/revisiongeneral/Evaluaciondellugar.mp4') }}" type="video/mp4">
+                <video class="embed-responsive-item" controls>
+                    <source src="{{ asset('videos/revisiongeneral/Evaluaciondellugar.mp4') }}"" type="video/mp4">
                 </video>
             </div>
-            <div class="">
-                <p>Duración: 2:13 Min.</p>
-                <p>¡Bienvenido! En esta capacitación se muestran los elementos básicos para adquirir y utilizar de forma responsable los instrumentos de primeros auxilios. ¡Te deseamos mucho éxito!</p>
-            </div>
+
         </div>
-        <h2>Formulario de Evaluación</h2>
+        <br>
+        <h2 class="text-center">Formulario de Evaluación</h2>
         <form id="evaluacionForm" action="{{ route('evaluaciones.store') }}" method="post">
             @csrf
             <fieldset>
@@ -53,8 +58,10 @@
             <br>
             <input class="btn btn-primary" type="submit" id="enviarlo" value="Enviar">
         </form>
+        <div class="text-center mt-3">
+            <a href="{{url('primerosauxilios/revisiongeneral/tecnicas')}}" class="btn btn-primary">Siguiente</a>
+        </div>
 
-        <a href="{{url('primerosauxilios/revisiongeneral/tecnicas')}}" class="btn btn-primary">Siguiente</a>
 
 
         <script>

@@ -5,7 +5,7 @@
     <div id="main" class="main">
         <br>
         <br>
-    <h2 class="modulo-title">Módulo 1: Primeros Auxilios.</h2>
+    <h2>Módulo 1: Primeros Auxilios.</h2>
         <div class="row">
             <div class="col-md-6">
                 

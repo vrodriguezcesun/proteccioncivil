@@ -7,7 +7,7 @@
             <div class="card">
                 <main id="main" class="main">
                     <div class="card-body">
-                        <div class="">
+                      
                             <div class="modal-header">
                                 <h3 class="modal-title">Información General</h3>
                             </div>
@@ -58,7 +58,7 @@
                                 </div>
                                 <button type="submit" class="btn btn-primary">Enviar Registro</button>
                             </form>
-                        </div>
+                    
                     </div>
                 </main>
                 <!-- Agrega el script de SweetAlert al final del cuerpo de la página -->
