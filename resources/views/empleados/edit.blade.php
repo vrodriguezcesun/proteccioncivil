@@ -68,7 +68,7 @@
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th>Año</th>
+                                          
                                             <th>Curso</th>
                                             <th>Fecha Inicio</th>
                                             <th>Fecha Fin</th>
@@ -78,12 +78,7 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>
-                                                <select class="form-control" name="cursopa_year" onchange="actualizarDatos(this)">
-                                                    @for ($i = 2022; $i <= 2024; $i++) <option value="{{ $i }}">{{ $i }}</option>
-                                                        @endfor
-                                                </select>
-                                            </td>
+                                           
                                             <td>
                                                 <input type="text" class="form-control" name="cursopa" value="{{ $empleado->cursopa }}" onmouseout="this.placeholder = 'Ingrese Primeros Auxilios'">
                                             </td>
@@ -106,12 +101,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td>
-                                                <select class="form-control" name="cursobyr_year">
-                                                    @for ($i = 2022; $i <= 2024; $i++) <option value="{{ $i }}">{{ $i }}</option>
-                                                        @endfor
-                                                </select>
-                                            </td>
+                                          
                                             <td>
                                                 <input type="text" class="form-control" name="cursobyr" value="{{ $empleado->cursobyr }}" onmouseout="this.placeholder = 'Ingrese Busqueda y Rescate'">
                                             </td>
@@ -132,12 +122,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td>
-                                                <select class="form-control" name="cursomyue_year">
-                                                    @for ($i = 2022; $i <= 2024; $i++) <option value="{{ $i }}">{{ $i }}</option>
-                                                        @endfor
-                                                </select>
-                                            </td>
+                                           
                                             <td>
                                                 <input type="text" class="form-control" name="cursomyue" value="{{ $empleado->cursomyue }}" onmouseout="this.placeholder = 'Ingrese Manejo y Uso'">
                                             </td>
@@ -157,12 +142,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <select class="form-control" name="cursoeyr_year">
-                                                    @for ($i = 2022; $i <= 2024; $i++) <option value="{{ $i }}">{{ $i }}</option>
-                                                        @endfor
-                                                </select>
-                                            </td>
+                                          
                                             <td>
                                                 <input type="text" class="form-control" name="cursoeyr" value="{{ $empleado->cursoeyr }}" onmouseout="this.placeholder = 'Ingrese  y Evacuacion y Rescate'">
                                             </td>
