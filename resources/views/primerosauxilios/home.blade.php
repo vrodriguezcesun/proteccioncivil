@@ -5,7 +5,7 @@
 
 </style>
 
-<section id="main" class="main main-section">
+<section id="main" class="main">
     <br>
     <div class="row">
         <div class="col-lg-12">

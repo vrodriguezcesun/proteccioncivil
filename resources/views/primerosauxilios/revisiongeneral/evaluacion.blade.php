@@ -11,11 +11,11 @@
                 realizar esta evaluación de manera efectiva para garantizar la seguridad y la eficiencia en la atención de
                 primeros auxilios.. ¡Te deseamos mucho éxito!</p>
         </div>
-     
+
         <div class="text-center">
             <div class="embed-responsive embed-responsive-16by9">
                 <video class="embed-responsive-item" controls>
-                    <source src="{{ asset('videos/revisiongeneral/Evaluaciondellugar.mp4') }}"" type="video/mp4">
+                    <source src="{{ asset('videos/revisiongeneral/Evaluaciondellugar.mp4') }}"" type=" video/mp4">
                 </video>
             </div>
 
