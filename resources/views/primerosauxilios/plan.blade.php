@@ -1,8 +1,8 @@
 @extends('layouts.app' ,['pagina'=>'plan'])
 @section('content')
 
-<div class="container">
-    <div id="main" class="main">
+<div class="container-fluid">
+    <div id="main" class="">
         <br>
         <br>
     <h2>Módulo 1: Primeros Auxilios.</h2>

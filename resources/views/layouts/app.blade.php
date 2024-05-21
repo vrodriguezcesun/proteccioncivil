@@ -11,7 +11,7 @@
 
     <!-- Estilos Personales-->
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/style.css') }}"><!-- Estilos SideBar-->
-    <!-- <link rel="stylesheet" type="text/css" href="{{ asset('/css/styles.css') }}">Estilos Personales-->
+    <link rel="stylesheet" href="{{ asset('/assets/css/style.css') }}">
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
@@ -31,7 +31,7 @@
     <!-- <link rel="stylesheet" href="{{ asset('/assets/css/dataTables.bootstrap4.min.css') }}"> -->
     <link rel="stylesheet" href="{{asset('/assets/css/select2.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/assets/css/bootstrap-datetimepicker.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('/assets/css/style.css') }}">
+    
     <link rel="stylesheet" href="{{ asset ('assets/css/toastr.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/fontawesome/css/all.min.css') }}">
     <!-- Google Fonts -->

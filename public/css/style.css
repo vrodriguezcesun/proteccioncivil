@@ -15,7 +15,7 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  background: #f6f9ff;
+  background: #fafafa;
   color: #444444;
 }
 
@@ -638,7 +638,7 @@ h6 {
 
   #main,
   #footer {
-    margin-left: 320px;
+    margin-left: 305px;
   }
 }
 
@@ -1278,7 +1278,5 @@ h6 {
   text-align: justify;
 }
 #main3{
-  margin-left: 170px;
-  width: 100%;
-
+  margin-left: 170 px;
 }
