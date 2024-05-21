@@ -237,11 +237,11 @@
 
                 // Display the SweetAlert
                 Swal.fire({
-                    position: "top-end",
+                    position: "top-center",
                     icon: "success",
-                    title: "Your work has been saved",
+                    title: "Respuestas enviadas",
                     showConfirmButton: false,
-                    timer: 1500
+                    timer: 1700
                 }).then((result) => {
                     if (result.isConfirmed) {
                         // If the user confirms, redirect to the employees page

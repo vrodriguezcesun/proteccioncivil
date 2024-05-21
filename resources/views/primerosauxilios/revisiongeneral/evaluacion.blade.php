@@ -56,7 +56,7 @@
                 <label for="opcion3_3">Llamar al 911</label><br>
             </fieldset>
             <br>
-            <input class="btn btn-primary" type="submit" id="enviarlo" value="Enviar">
+            <input class="btn btn-primary" type="submit" id="enviar" value="Enviar">
         </form>
         <div class="text-center mt-3">
             <a href="{{url('primerosauxilios/revisiongeneral/tecnicas')}}" class="btn btn-primary">Siguiente</a>
@@ -71,22 +71,6 @@
 
     </main>
 
-    <!-- Agrega el script de SweetAlert al final del cuerpo de la página -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    @if (session('success'))
-    <div class="center">
-        <script>
-            Swal.fire({
-                position: "center", // Centrar el mensaje en la página
-                icon: "success",
-                title: "Se ha enviado Correctamente",
-                showConfirmButton: false,
-                timer: 1500
-            })
-        </script>
-    </div>
-</div>
-@endif
 
 <script>
     $(document).ready(function() {

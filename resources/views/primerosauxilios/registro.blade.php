@@ -1,13 +1,14 @@
 @extends('layouts.app',['pagina'=>'registro'])
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-12">
             <div class="card">
-                <main id="main" class="main">
+                <main id="main">
                     <div class="card-body">
-                      
+                      <br>
+                      <br>
                             <div class="modal-header">
                                 <h3 class="modal-title">Información General</h3>
                             </div>
@@ -46,9 +47,9 @@
                                             <option value="" selected disabled>Selecciona una Sala</option>
                                             <option value="Alameda">Alameda</option>
                                             <option value="Hipodromo">Hipodromo</option>
-                                            <option value="Gerente">Gerente</option>
-                                            <option value="Mantenimiento">Mantenimiento</option>
-                                            <option value="Te. Sistemas">Tec. Sistemas</option>
+                                            <option value="Gerente">Galerias</option>
+                                            <option value="Mantenimiento">Macro Plaza</option>
+                                            <option value="Te. Sistemas">Pueblo Amigo</option>
                                         </select>
                                     </div>
                                     <div class="form-group col-sm-12 col-md-4">
