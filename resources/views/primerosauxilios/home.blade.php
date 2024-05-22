@@ -31,7 +31,7 @@
                                     <div class="d-flex justify-content-center align-items-center mb-3">
                                         <img src="{{ asset('img/Busqueda.jpeg') }}" alt="Imagen" class="img-fluid">
                                     </div>
-                                    <p class="m-b-0 text-right"><a href="/login/public/roles" class="mr-2">Ver más</a></p>
+                                    <p class="m-b-0 text-right"><a href="/login/public/roles" class="mr-2">Ir a...</a></p>
                                 </div>
                             </div>
                         </div>
@@ -43,7 +43,7 @@
                                     <div class="d-flex justify-content-center align-items-center mb-3">
                                         <img src="{{ asset('img/Manejo.jpeg') }}" alt="Imagen" class="img-fluid">
                                     </div>
-                                    <p class="m-b-0 text-right"><a href="/login/public/roles" class="mr-2">Ver más</a></p>
+                                    <p class="m-b-0 text-right"><a href="/login/public/roles" class="mr-2">Ir a...</a></p>
                                 </div>
                             </div>
                         </div>
@@ -55,7 +55,7 @@
                                     <div class="d-flex justify-content-center align-items-center mb-3">
                                         <img src="{{ asset('img/Procedimientos.jpg') }}" alt="Imagen" class="img-fluid">
                                     </div>
-                                    <p class="m-b-0 text-right"><a href="/login/public/roles" class="mr-2">Ver más</a></p>
+                                    <p class="m-b-0 text-right"><a href="/login/public/roles" class="mr-2">Ir a.../a></p>
                                 </div>
                             </div>
                         </div>
