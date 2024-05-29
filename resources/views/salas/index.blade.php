@@ -3,11 +3,11 @@
 @section('content')
 
 
-    <div class="mt-5 ml-2 p-3" style="padding: 30px;">
-    
-            <div class="card-body">
-                <div id="main" class="main">
-                    <!-- <div class="form-row">
+<div class="mt-5 ml-2 p-3" style="padding: 30px;">
+
+    <div class="card-body">
+        <div id="main" class="main">
+            <!-- <div class="form-row">
                     <div class="mb-2">
                         <a class="btn btn-outline-primary" href="{{url('empleados/create')}}">Nuevo</a>
 
@@ -19,11 +19,11 @@
                             <input type="submit" class="btn btn-outline-primary ml-auto my-1" value="Buscar">
                         </div>
                     </div> -->
-                    <div class="mb-2">
-                        <a class="btn btn-outline-primary" href="{{url('salas/create')}}">Nuevo</a>
+            <div class="mb-2">
+                <a class="btn btn-outline-primary" href="{{url('salas/create')}}">Nuevo</a>
 
-                    </div>
-                   <!--  <form action="{{ route('empleados.index') }}" method="get">
+            </div>
+            <!--  <form action="{{ route('empleados.index') }}" method="get">
                         <div class="form-row">
 
                             <div class="col-sm-8 my-1">
@@ -34,49 +34,51 @@
                             </div>
                         </div>
                     </form> -->
-                    <div class="table-responsive">
-                    <table id="buscar" class="table table-striped" style="width:100%">
-                            <thead>
-                                <tr>
-                                    <th style="display: none;">ID</th>
-                                    <th>Nombre de La sala</th>
-                                    <th>Direccion</th>
-                                    <th>RFC</th>
-                                    <th>Acciones</th>
+            <div class="table-responsive">
+                <table id="buscar" class="table table-striped" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th style="display: none;">ID</th>
+                            <th>Nombre de La sala</th>
+                            <th>Direccion</th>
+                            <th>RFC</th>
+                            <th>Acciones</th>
 
-                                </tr>
-                            </thead>
+                        </tr>
+                    </thead>
 
-                            <tbody>
-                                @foreach($salas as $sala)
-                                <tr>
-                                    <td style="display: none;">{{$sala->id}}</td>
-                                    <td>{{$sala->nombre}}</td>
-                                    <td>{{$sala->direccion}}</td>
-                                    <td>{{$sala->rfc}}</td>
-                                    <td>
-                                        <a class="btn btn-success" href="#"><i class='bx bx-low-vision'></i></a>
-                                        <a class="btn btn-info" href="{{route('salas.edit' , $sala->id)}}"><i class='bx bx-edit'></i></a>
-                                        <form id="eliminar-{{ $sala->id }}" action="{{ route('salas.destroy', $sala->id) }}" method="post" style="display: inline;">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="button" class="btn btn-danger delete-button"><i class='bx bx-user-minus'></i></button>
-                                        </form>
-                                    </td>                                
+                    <tbody>
+                        @foreach($salas as $sala)
+                        <tr>
+                            <td style="display: none;">{{$sala->id}}</td>
+                            <td>{{$sala->nombre}}</td>
+                            <td>{{$sala->direccion}}</td>
+                            <td>{{$sala->rfc}}</td>
+                            <td>
+                                <a class="btn btn-success" href="#"><i class='bx bx-low-vision'></i></a>
+                                <a class="btn btn-info" href="{{route('salas.edit' , $sala->id)}}"><i class='bx bx-edit'></i></a>
+                                <form id="eliminar-{{ $sala->id }}" action="{{ route('salas.destroy', $sala->id) }}" method="post" style="display: inline;">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="button" class="btn btn-danger delete-button"><i class='bx bx-user-minus'></i></button>
+                                </form>
+                                <a class="btn" href="{{ route('salas.certificadosa', $sala->id) }}"><i class='bx bxs-file-pdf bx-md' style="color: red; font-size: 20px;"></i></a>
+                              
+                            </td>
 
-                                </tr>
+                        </tr>
 
-                                @endforeach
-                            </tbody>
-                        </table>
-                        </div>
-                    <div class="d-flex justify-content-center">
-                        {!! $salas->links() !!}
-                    </div>
-                </div>
+                        @endforeach
+                    </tbody>
+                </table>
             </div>
-
+            <div class="d-flex justify-content-center">
+                {!! $salas->links() !!}
+            </div>
+        </div>
     </div>
+
+</div>
 
 
 

@@ -5,16 +5,16 @@
 <div class="row">
     <div class="col-sm-12">
         <div class="card">
-            <main id="main" class="main">
+            <main id="main" class="">
                 <div class="card-body">
-                    <div class="pagetitle">
+                    <div class="">
                         <div class="modal-header">
                             <h3 class="modal-title" style="float: left;">Informacion General</h3>
                         </div>
                         <form action="{{ route('empleados.update', $empleado->id) }}" method="POST">
                             @csrf
                             @method('PUT')
-                            <div class="row">
+                            <div class="row ml-2">
                                 <div class="form-group col-md-2">
                                     <div class="col-sm-12 pl-0 pr-0">
                                         <label for="empleado" class="col-sm-12 pl-0 pr-0">No.Empleado</label>
@@ -32,6 +32,12 @@
                                     <div class="col-sm-12 pl-0 pr-0">
                                         <label for="" class="col-sm-12 pl-0 pr-0">Correo</label>
                                         <input type="email" class="form-control" name="email" value="{{ $empleado->email }}">
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <div class="col-sm-12 pl-0 pr-0">
+                                        <label for="" class="col-sm-12 pl-0 pr-0">Curp</label>
+                                        <input type="text" class="form-control" name="curp" value="{{ $empleado->curp }}">
                                     </div>
                                 </div>
                                 <div class="form-group col-md-2">
@@ -54,10 +60,21 @@
 
 
 
-                                <div class="form-group col-md-3">
+                                <!-- <div class="form-group col-md-3">
                                     <div class="col-sm-12 pl-0 pr-0">
-                                        <label for="" class="col-sm-12 pl-0 pr-0">Sala</label>
+                                        <label for="sala" class="col-sm-12 pl-0 pr-0">Sala</label>
                                         <input type="text" class="form-control" name="sala" value="{{ $empleado->sala }}">
+                                    </div>
+                                </div> -->
+                                <div class="form-group col-md-4">
+                                    <div class="col-sm-12 pl-0 pr-0">
+                                        <label for="sala" class="col-sm-12 pl-0 pr-0">Sala</label>
+                                        <select name="sala" class="form-control">
+                                            <option value="{{ $empleado->sala }}">{{ $empleado->sala }}</option>
+                                            @foreach($salas as $sala)
+                                            <option value="{{ $sala->nombre }}">{{ $sala->nombre }}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -65,7 +82,7 @@
                                 <h3 class="modal-title" style="float: left;">Informacion de Capacitaciones</h3>
                             </div>
                             <div class="form-group">
-                                <table class="table">
+                                <table class="table ml-2">
                                     <thead>
                                         <tr>
                                           
@@ -166,7 +183,7 @@
                                 </table>
                             </div>
 
-                            <button type="submit" class="btn btn-primary" id="editar">Guardar Registro</button>
+                            <button type="submit" class="btn btn-primary ml-3" id="editar">Guardar Registro</button>
                         </form>
                     </div>
                 </div>

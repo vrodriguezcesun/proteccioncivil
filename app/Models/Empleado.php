@@ -14,6 +14,7 @@ class Empleado extends Model
         'puesto',
         'sala',
         'email',
+        'curp',
         'telefono',
         'cursopa',
         'cursopai',

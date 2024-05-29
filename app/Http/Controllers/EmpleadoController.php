@@ -61,6 +61,7 @@ class EmpleadoController extends Controller
             'puesto' => 'required|string',
             'sala' => 'required|string',
             'email' => 'required|email',
+            'curp' => 'nullable|string',
             'telefono' => 'nullable|string',
             'cursopa' => 'nullable|string',
             'cursopai' => 'nullable|string',
@@ -88,6 +89,7 @@ class EmpleadoController extends Controller
         $empleado->puesto = $request->puesto;
         $empleado->sala = $request->sala;
         $empleado->email = $request->email;
+        $empleado->curp = $request->curp;
         $empleado->telefono = $request->telefono;
         $empleado->cursopa = $request->cursopa;
         $empleado->cursopai = $request->cursopai;
@@ -105,10 +107,6 @@ class EmpleadoController extends Controller
         $empleado->cursoeyri = $request->cursoeyri;
         $empleado->cursoeyrf = $request->cursoeyrf;
         $empleado->ciudadeyr = $request->ciudadeyr;
-
-
-
-
 
         // Guardar el objeto en la base de datos
         $empleado->save();
@@ -133,8 +131,9 @@ class EmpleadoController extends Controller
     {
         $empleado = Empleado::find($id);
         $puestos = Puesto::all(); // Obtener todos los puestos disponibles
+        $salas = Sala::all();
 
-        return view('empleados.edit', compact('empleado','puestos'));
+        return view('empleados.edit', compact('empleado','puestos','salas'));
     }
 
 
@@ -144,10 +143,10 @@ class EmpleadoController extends Controller
         $request->validate([
             'empleado' => 'nullable|numeric',
             'nombre' => 'nullable|string',
-          
             'puesto' => 'nullable|string',
             'sala' => 'nullable|string',
             'email' => 'nullable|email',
+            'curp' => 'nullable|string',
             'telefono' => 'nullable|string',
             'cursopa' => 'nullable|string',
             'cursopai' => 'nullable|string',
@@ -185,6 +184,7 @@ class EmpleadoController extends Controller
             'puesto' => $request->puesto,
             'sala' => $request->sala,
             'email' => $request->email,
+            'curp' => $request->curp,
             'telefono' => $request->telefono,
             'cursopa' => $request->cursopa,
             'cursopai' => $request->cursopai,
@@ -251,8 +251,12 @@ class EmpleadoController extends Controller
         // Restablece el idioma local de Carbon al valor predeterminado (opcional, dependiendo de tus necesidades)
         Carbon::setLocale(config('app.locale'));
 
-        // Personaliza los márgenes
-        $margenes = ['top' => 5, 'right' => 5, 'bottom' => 5, 'left' => 5];
+          // Personaliza los márgenes
+          $pdf->setPaper('letter', 'landscape')
+          ->setOption('margin-top', '2cm')
+          ->setOption('margin-right', '2cm')
+          ->setOption('margin-bottom', '2cm')
+          ->setOption('margin-left', '2cm');
 
         // Descarga el PDF con un nombre específico (por ejemplo, el nombre del empleado)
         return $pdf->setPaper('A4', 'landscape')->stream('Certificado Primeros Auxilios ' . $empleado->nombre . ' ' . $empleado->apellido . '.pdf');
@@ -295,8 +299,12 @@ class EmpleadoController extends Controller
         // Restablece el idioma local de Carbon al valor predeterminado (opcional, dependiendo de tus necesidades)
         Carbon::setLocale(config('app.locale'));
 
-        // Personaliza los márgenes
-        $margenes = ['top' => 5, 'right' => 5, 'bottom' => 5, 'left' => 5];
+          // Personaliza los márgenes
+          $pdf->setPaper('letter', 'landscape')
+          ->setOption('margin-top', '2cm')
+          ->setOption('margin-right', '2cm')
+          ->setOption('margin-bottom', '2cm')
+          ->setOption('margin-left', '2cm');
 
         // Descarga el PDF con un nombre específico (por ejemplo, el nombre del empleado)
         return $pdf->setPaper('A4', 'landscape')->stream('Certificado Busqueda y Rescate ' . $empleado->nombre . ' ' . $empleado->apellido . '.pdf');
@@ -317,8 +325,12 @@ class EmpleadoController extends Controller
         // Restablece el idioma local de Carbon al valor predeterminado (opcional, dependiendo de tus necesidades)
         Carbon::setLocale(config('app.locale'));
 
-        // Personaliza los márgenes
-        $margenes = ['top' => 5, 'right' => 5, 'bottom' => 5, 'left' => 5];
+           // Personaliza los márgenes
+           $pdf->setPaper('letter', 'landscape')
+           ->setOption('margin-top', '2cm')
+           ->setOption('margin-right', '2cm')
+           ->setOption('margin-bottom', '2cm')
+           ->setOption('margin-left', '2cm');
 
         // Descarga el PDF con un nombre específico (por ejemplo, el nombre del empleado)
         return $pdf->setPaper('A4', 'landscape')->stream('Certificado Evacuacion y Rescate ' . $empleado->nombre . ' ' . $empleado->apellido . '.pdf');

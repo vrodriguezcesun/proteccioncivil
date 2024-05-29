@@ -43,7 +43,7 @@ Route::get('empleados/{id}/certificadoeyr', [EmpleadoController::class, 'generat
 Route::resource('/puestos', PuestosController::class)->names('puestos');
 //Ruta para ver salas
 Route::resource('/salas', SalasController::class)->names('salas');
-
+Route::get('salas/{id}/certificadosa', [SalasController::class, 'generateCertificate'])->name('salas.certificadosa');
 
 
 Route::prefix('primerosauxilios')->group(function () {

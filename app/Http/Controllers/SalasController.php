@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Sala;
+use Barryvdh\DomPDF\Facade\Pdf;
+use Carbon\Carbon;
 
 class SalasController extends Controller
 {
@@ -49,7 +51,7 @@ class SalasController extends Controller
             'nombre' => 'required|string',
             'direccion' => 'nullable|string',
             'rfc' => 'nullable|string',
-          
+
         ]);
         // Crear un nuevo objeto Empleado con los datos del formulario
         $sala = new Sala();
@@ -133,6 +135,35 @@ class SalasController extends Controller
         $sala->delete();
 
         // Redirigir a la página de empleados con un mensaje de éxito
-        return redirect()->route('salas.index')->with('success', 'Empleado eliminado correctamente.');
+        return redirect()->route('salas.index')->with('success', 'Sala eliminado correctamente.');
+    }
+
+
+
+
+    // Certificado de Sala
+    public function generateCertificate($id)
+    {
+        // Obtén los datos del empleado según el ID
+        $sala = Sala::findOrFail($id);
+
+        // Configura el idioma local de Carbon a español
+        Carbon::setLocale('es_ES');
+
+        // Crea el certificado PDF usando la librería PDF (dompdf, tcpdf, etc.)
+        $pdf = PDF::loadView('salas.certificadosa', compact('sala'));
+
+        // Restablece el idioma local de Carbon al valor predeterminado (opcional, dependiendo de tus necesidades)
+        Carbon::setLocale(config('app.locale'));
+
+        // Personaliza los márgenes
+        $pdf->setPaper('letter', 'landscape')
+            ->setOption('margin-top', '2cm')
+            ->setOption('margin-right', '2cm')
+            ->setOption('margin-bottom', '2cm')
+            ->setOption('margin-left', '2cm');
+
+        // Descarga el PDF con un nombre específico (por ejemplo, el nombre del empleado)
+        return $pdf->setPaper('letter', 'landscape')->stream('Certificado a ' . $sala->nombre . '.pdf');
     }
 }

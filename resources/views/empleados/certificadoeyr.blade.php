@@ -70,7 +70,8 @@
             text-align: center;
             color: black;
             font-size: x-large;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
             margin-top: 20px;
         }
 
@@ -114,7 +115,7 @@
 
         .centro {
             text-justify: auto;
-            margin-left: 30px;
+            margin-left: 0px;
             margin-bottom: 0px;
             padding: 0px;
 
@@ -134,9 +135,14 @@
             text-align: justify;
             line-height: 1.1;
             /* Ajusta el valor según sea necesario, un valor menor reducirá el espacio entre líneas */
+            font-family: Arial, sans-serif;
 
         }
 
+        .letra {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
 
 
 
@@ -263,7 +269,7 @@
         <div>
 
             <div class="centrado">
-                <p class="centrado">Octavio Mendez Stoever</p>
+                <p class="centrado letra">Octavio Méndez Stoever</p>
             </div>
 
 

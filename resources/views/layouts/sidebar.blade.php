@@ -14,7 +14,7 @@
                 </li>
                 <li class="submenu">
                     @can('usuario.index')
-                    <a href="#"><i class='bx bxs-user'></i></i> <span> Administracion</span> <span class="menu-arrow"></span></a>
+                    <a href="#"><i class='bx bxs-user'></i></i> <span> Administración</span> <span class="menu-arrow"></span></a>
                     @endcan
                     <ul style="display: none;">
                         <li class="submenu">
@@ -32,13 +32,13 @@
                                     </a>
                                 </li>
                                 @endcan
-                              
+                              <!-- 
                                 <li>
                                     <a class="{{$pagina == 'edit'? 'active' : ''}}" href="{{url('usuarios/edit')}}">
                                         <i class="bi bi-circle"></i><span>Editar Usuarios</span>
                                     </a>
                                 </li>
-                              
+                               -->
                             </ul>
                         </li>
                         

@@ -35,6 +35,7 @@
                                         <input type="text" class="form-control" name="rfc" value="{{ $sala->rfc }}">
                                     </div>
                                 </div>
+                                
                                
                             </div>
                                                     

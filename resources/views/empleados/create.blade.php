@@ -1,18 +1,19 @@
 @extends('layouts.app',['pagina'=>'empleados.create'])
 
 @section('content')
+
 <div class="row">
     <div class="col-sm-12">
         <div class="card">
-            <main id="main" class="main">
+            <main id="main" class="">
                 <div class="card-body">
-                    <div class="pagetitle">
-                        <div class="modal-header">
+                    <div class="">
+                        <div class="modal-header ml-2">
                             <h3 class="modal-title" style="float: left;">Informacion General</h3>
                         </div>
                         <form id="" method="POST" action="{{ route('empleados.store') }}">
                             @csrf
-                            <div class="row g-1">
+                            <div class="row g-1 ml-2">
                                 <div class="form-group col-md-2">
                                     <div class="col-sm-12 pl-0 pr-0">
                                         <label for="" class="col-sm-12 pl-0 pr-0">No.Empleado</label>
@@ -31,6 +32,12 @@
                                     <div class="col-sm-12 pl-0 pr-0">
                                         <label for="nombre" class="col-sm-12 pl-0 pr-0">Correo</label>
                                         <input type="email" class="form-control" id="nombre" name="email" required>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <div class="col-sm-12 pl-0 pr-0">
+                                        <label class="col-sm-12 pl-0 pr-0">Curp</label>
+                                        <input type="text" class="form-control" name="curp">
                                     </div>
                                 </div>
                                 <div class="form-group col-md-2">
@@ -52,7 +59,7 @@
 
                                     </div>
                                 </div>
-                                <div class="form-group col-md-3">
+                                <div class="form-group col-md-4">
                                     <div class="col-sm-12 pl-0 pr-0">
                                         <label for="" class="col-sm-12 pl-0 pr-0">Sala</label>
                                         <select name="sala" class="form-control">
@@ -67,15 +74,15 @@
                             </div>
                             <br>
 
-                            <div class="row">
+                            <div class="row ml-2">
 
                                 <div class="modal-header">
-                                    <h3 class="modal-title" style="float: left;">Capacitaciones Laboral</h3>
+                                    <h3 class="modal-title"  style="float: left;">Capacitaciones Laboral</h3>
                                 </div>
                             </div>
 
                             <br>
-                            <div class="row g-1">
+                            <div class="row g-1 ml-2">
 
                                 <div class="form-check form-check-inline col-3 mr-0 px-0">
                                     <input class="form-check-input" type="checkbox" name="cursopa" value="Primeros Auxilios">
@@ -111,7 +118,7 @@
 
 
                             </div>
-                            <div class="row">
+                            <div class="row ml-2">
                                 <div class="form-check form-check-inline col-3 mr-0 px-1">
                                     <input class="form-check-input" type="checkbox" name="cursobyr" value="Busqueda y Rescate">
                                     <label class="form-check-label">Busqueda y Rescate</label>
@@ -146,7 +153,7 @@
 
                             </div>
 
-                            <div class="row g-1">
+                            <div class="row g-1 ml-2">
                                 <div class="form-check form-check-inline col-3 mr-0 px-0">
                                     <input class="form-check-input" type="checkbox" name="cursomyue" value="Manejo de Extintores">
                                     <label class="form-check-label">Manejo de Extintores</label>
@@ -179,7 +186,7 @@
                                 </div>
 
                             </div>
-                            <div class="row g-1">
+                            <div class="row g-1 ml-2">
                                 <div class="form-check form-check-inline col-3 mr-0 px-0">
                                     <input class="form-check-input" type="checkbox" name="cursoeyr" value="Evacuacion y Rescate">
                                     <label class="form-check-label">Evacuacion y Rescate</label>
@@ -213,7 +220,7 @@
                             </div>
 
 
-                            <input class="btn btn-primary" type="submit" id="enviarlo" value="Enviar">
+                            <input class="btn btn-primary ml-4" type="submit" id="enviarlo" value="Enviar">
                         </form>
                     </div>
 
