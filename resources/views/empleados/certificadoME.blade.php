@@ -6,19 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certificado</title>
     
-
     <style>
         body {
-            margin-top: 10px;
+            margin-top: 5px;
             /* Ajusta el margen superior según sea necesario */
-            margin-right: 20px;
+            margin-right: 5px;
             /* Ajusta el margen derecho según sea necesario */
             margin-bottom: -1px;
             /* Ajusta el margen inferior según sea necesario */
-            margin-left: 50px;
+            margin-left: 5px;
             /* Ajusta el margen izquierdo según sea necesario */
             padding: 0;
-          
+
 
 
         }
@@ -78,18 +77,21 @@
         .constancia {
             text-align: center;
             color: dimgray;
-            font-size: 50px;
+            font-size: 55px;
             font-weight: bold;
             font-family: Arial, Helvetica, sans-serif;
         }
 
         .a {
             color: red;
-            font-size: 50px;
+            font-size: 47px;
             text-align: left;
             margin-right: 10px;
             padding: 0 0 0 0;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
         }
+
 
         h2 {
             font-size: 24px;
@@ -98,7 +100,9 @@
         p {
             font-size: 30px;
             text-align: justify;
+            
         }
+        
 
         .form-control {
             background-color: #ffffff;
@@ -121,6 +125,14 @@
 
         }
 
+        .letra {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            font-size: 50px;
+
+        }
+
+
         .centro label,
         .centro input {
             display: inline-block;
@@ -136,6 +148,7 @@
             line-height: 1.1;
             /* Ajusta el valor según sea necesario, un valor menor reducirá el espacio entre líneas */
             font-family: Arial, sans-serif;
+            
 
         }
 
@@ -143,8 +156,6 @@
             font-family: Arial, sans-serif;
             font-weight: bold;
         }
-
-
 
         .prueba {
             margin-left: 5px;
@@ -156,6 +167,8 @@
             margin: 0;
             font-size: 25px;
             font-family: Arial, Helvetica, sans-serif;
+            margin-bottom: 5px; /* Margen inferior negativo para acercar el texto más cerca de la línea */
+
 
         }
 
@@ -163,6 +176,7 @@
             text-align: center;
             margin: 0;
             font-size: large;
+            margin-bottom: -10px; /* Reduciendo el margen inferior del párrafo */
         }
 
         .pie-de-pagina {
@@ -181,30 +195,35 @@
         .l1 {
             width: 100%;
             height: 35px;
-            border-width: 5px 5px 0 0;
+            border-width: 7px 7px 0 0;
             border-style: solid;
             border-color: grey;
             transform: scaleX(-1);
             margin: 0 0 0 0;
             /* Ajusta el margen según sea necesario */
             padding: 5px 0 0 0;
-
+            top: 0px;
+            /* Ajusta este valor según sea necesario */
 
         }
+
 
         .l2 {
             position: absolute;
             width: 100%;
             height: 35px;
-            border-width: 0 5px 5px 0;
+            border-width: 0 7px 7px 0;
             border-style: solid;
             border-color: red;
             transform: rotate(0deg);
             margin: 0px;
             padding: 0 0 0 0;
             z-index: 0;
+            top: 0px;
+            /* Ajusta este valor según sea necesario */
 
         }
+
 
         .rotar-imagen {
             max-width: 100%;
@@ -253,7 +272,7 @@
 
         <div class="centro">
             <label class="a">A:</label>
-            <input type="text" class="form-control" value="{{ $empleado->nombre }} {{ $empleado->apellido }}" name="Name">
+            <input type="text" class="form-control letra" value="{{ $empleado->nombre }} {{ $empleado->apellido }}" name="Name">
         </div>
         <div class="centro">
             <p>Por haber participado y acreditado el curso de Uso y Manejo de Extintores, acorde a los programas de capacitación
@@ -267,9 +286,12 @@
         
 
         <div>
-
-            <div class="centrado">
-                <p class="centrado letra">Octavio Méndez Stoever</p>
+<br>
+        <div class="centrado">
+                <div style="position: relative;">
+                   <img src="./img/firma2.jpg" style="position: absolute; top: 5%; left: 50%; transform: translate(-50%, -50%);">
+                    <p class="centrado letra" style="position: relative; z-index: 1;">Octavio Méndez Stoever</p>
+                </div>
             </div>
 
 

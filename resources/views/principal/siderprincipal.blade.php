@@ -17,10 +17,10 @@
 <body>
  
     <aside class="sidebar">
-      <div class="toggle">
-        <a href="#" class="/ js-menu-toggle" data-toggle="collapse" data-target="#main-navbar">
-          <span></span>
-        </a>
+    <div class="toggle">
+        <a href="#" class="burger js-menu-toggle" data-toggle="collapse" data-target="#main-navbar">
+              <span></span>
+            </a>
       </div>
       <div class="side-inner">
 

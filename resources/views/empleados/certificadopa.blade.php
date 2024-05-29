@@ -6,21 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certificado</title>
 
-
     <style>
         body {
-            margin-top: 10px;
+            margin-top: 5px;
             /* Ajusta el margen superior según sea necesario */
-            margin-right: 20px;
+            margin-right: 5px;
             /* Ajusta el margen derecho según sea necesario */
             margin-bottom: -1px;
             /* Ajusta el margen inferior según sea necesario */
-            margin-left: 50px;
+            margin-left: 5px;
             /* Ajusta el margen izquierdo según sea necesario */
             padding: 0;
-
-
-
         }
 
         .contenedor {
@@ -30,8 +26,6 @@
             align-items: center;
             justify-content: center;
             position: relative;
-
-
         }
 
         .contenedor img {
@@ -57,7 +51,6 @@
 
         }
 
-
         .grupocaliente {
             text-align: center;
             color: black;
@@ -78,17 +71,19 @@
         .constancia {
             text-align: center;
             color: dimgray;
-            font-size: 50px;
-            font-family: Arial, sans-serif;
+            font-size: 55px;
             font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
         .a {
             color: red;
-            font-size: 50px;
+            font-size: 47px;
             text-align: left;
             margin-right: 10px;
             padding: 0 0 0 0;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
         }
 
         h2 {
@@ -98,6 +93,7 @@
         p {
             font-size: 30px;
             text-align: justify;
+
         }
 
         .form-control {
@@ -121,6 +117,12 @@
 
         }
 
+        .letra {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            font-size: 50px;
+        }
+
         .centro label,
         .centro input {
             display: inline-block;
@@ -136,17 +138,12 @@
             line-height: 1.1;
             /* Ajusta el valor según sea necesario, un valor menor reducirá el espacio entre líneas */
             font-family: Arial, sans-serif;
-
         }
 
         .letra {
             font-family: Arial, sans-serif;
             font-weight: bold;
-            font-size: 50px;
-
         }
-
-
 
         .prueba {
             margin-left: 5px;
@@ -158,6 +155,8 @@
             margin: 0;
             font-size: 25px;
             font-family: Arial, Helvetica, sans-serif;
+            margin-bottom: 5px;
+            /* Margen inferior negativo para acercar el texto más cerca de la línea */
 
         }
 
@@ -165,6 +164,8 @@
             text-align: center;
             margin: 0;
             font-size: large;
+            margin-bottom: -10px;
+            /* Reduciendo el margen inferior del párrafo */
         }
 
         .pie-de-pagina {
@@ -180,7 +181,6 @@
             height: auto;
         }
 
-    
         .l1 {
             width: 100%;
             height: 35px;
@@ -191,9 +191,8 @@
             margin: 0 0 0 0;
             /* Ajusta el margen según sea necesario */
             padding: 5px 0 0 0;
-            top: 25px;
+            top: 0px;
             /* Ajusta este valor según sea necesario */
-
         }
 
         .l2 {
@@ -207,19 +206,15 @@
             margin: 0px;
             padding: 0 0 0 0;
             z-index: 0;
-            top: 10px;
+            top: 0px;
             /* Ajusta este valor según sea necesario */
-
         }
-
 
         .rotar-imagen {
             max-width: 100%;
             height: auto;
             /* Refleja horizontalmente la imagen */
             transform: scaleX(-1);
-
-
         }
 
         .registro-ssa {
@@ -266,24 +261,19 @@
             <p>Por haber participado y acreditado el curso de primeros auxilios, acorde a los programas de capacitación
                 incorporados a la Secretaria del Trabajo y Previsión Social y la Secretaria de Salud de B.C. impartido en la Ciudad
                 de {{$empleado->ciudadpa}} B.C. el día {{ \Carbon\Carbon::parse($empleado->cursopai)->locale('es_ES')->isoFormat('LL') }}
-
                 .</p>
         </div>
         <br>
         <br>
         <br>
-
         <div>
-
+            <br>
             <div class="centrado">
                 <div style="position: relative;">
                     <img src="./img/firma2.jpg" style="position: absolute; top: 5%; left: 50%; transform: translate(-50%, -50%);">
                     <p class="centrado letra" style="position: relative; z-index: 1;">Octavio Méndez Stoever</p>
                 </div>
             </div>
-
-
-
             <div class="centrado">
                 <p class="centrado">Instructor</p>
             </div>
@@ -297,11 +287,7 @@
             <div class="centrado" style="position: relative;">
                 <div class="l2"></div>
                 <p class="centrado1 registro-ss">Registro SSA: IPRC0102-16</p>
-
             </div>
-
-
-
         </div>
 
     </div>

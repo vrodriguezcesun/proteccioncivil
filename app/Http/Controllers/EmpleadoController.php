@@ -23,11 +23,11 @@ class EmpleadoController extends Controller
         // De lo contrario, obtener todos los empleados paginados
         $empleados = $texto ? Empleado::where('nombre', 'LIKE', '%' . $texto . '%')
             ->orWhere('empleado', 'LIKE', '%' . $texto . '%')
-            
+
             ->orWhere('puesto', 'LIKE', '%' . $texto . '%')
             ->orWhere('sala', 'LIKE', '%' . $texto . '%')
             ->orWhere('created_at', 'LIKE', '%' . $texto . '%')
-          
+
             : Empleado::paginate(10000);
 
         // Retornar la vista con los empleados filtrados o paginados
@@ -38,15 +38,15 @@ class EmpleadoController extends Controller
     public function create()
     {   // Obtener todas las salas disponibles
         $puestos = Puesto::all();
-        
-       // Obtener todas las salas disponibles
+
+        // Obtener todas las salas disponibles
         $salas = Sala::all();
-        
+
         // Inicializar una nueva instancia de Empleado
         $empleado = new Empleado();
-        
+
         // Devolver la vista con las salas y el empleado
-        return view('empleados.create', compact('salas', 'empleado','puestos'));
+        return view('empleados.create', compact('salas', 'empleado', 'puestos'));
     }
 
     /**
@@ -133,7 +133,7 @@ class EmpleadoController extends Controller
         $puestos = Puesto::all(); // Obtener todos los puestos disponibles
         $salas = Sala::all();
 
-        return view('empleados.edit', compact('empleado','puestos','salas'));
+        return view('empleados.edit', compact('empleado', 'puestos', 'salas'));
     }
 
 
@@ -251,15 +251,16 @@ class EmpleadoController extends Controller
         // Restablece el idioma local de Carbon al valor predeterminado (opcional, dependiendo de tus necesidades)
         Carbon::setLocale(config('app.locale'));
 
-          // Personaliza los márgenes
-          $pdf->setPaper('letter', 'landscape')
-          ->setOption('margin-top', '2cm')
-          ->setOption('margin-right', '2cm')
-          ->setOption('margin-bottom', '2cm')
-          ->setOption('margin-left', '2cm');
+        // Personaliza los márgenes
+        $pdf->setPaper('letter', 'landscape')
+            ->setOption('margin-top', '1cm')
+            ->setOption('margin-right', '2cm')
+            ->setOption('margin-bottom', '2cm')
+            ->setOption('margin-left', '2cm');
+
 
         // Descarga el PDF con un nombre específico (por ejemplo, el nombre del empleado)
-        return $pdf->setPaper('A4', 'landscape')->stream('Certificado Primeros Auxilios ' . $empleado->nombre . ' ' . $empleado->apellido . '.pdf');
+        return $pdf->setPaper('letter', 'landscape')->stream('Certificado Primeros Auxilios ' . $empleado->nombre . ' ' . $empleado->apellido . '.pdf');
     }
 
 
@@ -280,11 +281,18 @@ class EmpleadoController extends Controller
         Carbon::setLocale(config('app.locale'));
 
         // Personaliza los márgenes
-        $margenes = ['top' => 5, 'right' => 5, 'bottom' => 5, 'left' => 5];
+        $pdf->setPaper('letter', 'landscape')
+            ->setOption('margin-top', '1cm')
+            ->setOption('margin-right', '2cm')
+            ->setOption('margin-bottom', '2cm')
+            ->setOption('margin-left', '2cm');
+
 
         // Descarga el PDF con un nombre específico (por ejemplo, el nombre del empleado)
-        return $pdf->setPaper('A4', 'landscape')->stream('Certificado Manejo y Uso de Extintores ' . $empleado->nombre . ' ' . $empleado->apellido . '.pdf');
+        return $pdf->setPaper('letter', 'landscape')->stream('Certificado Manejo y Uso de Extintores ' . $empleado->nombre . ' ' . $empleado->apellido . '.pdf');
     }
+
+
     public function generateCertificatebyr($id)
     {
         // Obtén los datos del empleado según el ID
@@ -299,15 +307,15 @@ class EmpleadoController extends Controller
         // Restablece el idioma local de Carbon al valor predeterminado (opcional, dependiendo de tus necesidades)
         Carbon::setLocale(config('app.locale'));
 
-          // Personaliza los márgenes
-          $pdf->setPaper('letter', 'landscape')
-          ->setOption('margin-top', '2cm')
-          ->setOption('margin-right', '2cm')
-          ->setOption('margin-bottom', '2cm')
-          ->setOption('margin-left', '2cm');
+        // Personaliza los márgenes
+        $pdf->setPaper('letter', 'landscape')
+            ->setOption('margin-top', '1cm')
+            ->setOption('margin-right', '2cm')
+            ->setOption('margin-bottom', '2cm')
+            ->setOption('margin-left', '2cm');
 
         // Descarga el PDF con un nombre específico (por ejemplo, el nombre del empleado)
-        return $pdf->setPaper('A4', 'landscape')->stream('Certificado Busqueda y Rescate ' . $empleado->nombre . ' ' . $empleado->apellido . '.pdf');
+        return $pdf->setPaper('letter', 'landscape')->stream('Certificado Busqueda y Rescate ' . $empleado->nombre . ' ' . $empleado->apellido . '.pdf');
     }
 
 
@@ -325,14 +333,14 @@ class EmpleadoController extends Controller
         // Restablece el idioma local de Carbon al valor predeterminado (opcional, dependiendo de tus necesidades)
         Carbon::setLocale(config('app.locale'));
 
-           // Personaliza los márgenes
-           $pdf->setPaper('letter', 'landscape')
-           ->setOption('margin-top', '2cm')
-           ->setOption('margin-right', '2cm')
-           ->setOption('margin-bottom', '2cm')
-           ->setOption('margin-left', '2cm');
+        // Personaliza los márgenes
+        $pdf->setPaper('letter', 'landscape')
+            ->setOption('margin-top', '1cm')
+            ->setOption('margin-right', '2cm')
+            ->setOption('margin-bottom', '2cm')
+            ->setOption('margin-left', '1cm');
 
         // Descarga el PDF con un nombre específico (por ejemplo, el nombre del empleado)
-        return $pdf->setPaper('A4', 'landscape')->stream('Certificado Evacuacion y Rescate ' . $empleado->nombre . ' ' . $empleado->apellido . '.pdf');
+        return $pdf->setPaper('letter', 'landscape')->stream('Certificado Evacuacion y Rescate ' . $empleado->nombre . ' ' . $empleado->apellido . '.pdf');
     }
 }
