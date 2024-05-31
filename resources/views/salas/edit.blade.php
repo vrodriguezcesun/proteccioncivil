@@ -35,7 +35,12 @@
                                         <input type="text" class="form-control" name="rfc" value="{{ $sala->rfc }}">
                                     </div>
                                 </div>
-                                
+                                <div class="form-group col-md-2">
+                                    <div class="col-sm-12 pl-0 pr-0">
+                                        <label for="" class="col-sm-12 pl-0 pr-0">Fecha</label>
+                                        <input type="text" class="form-control" name="fecha" value="{{ $sala->fecha }}">
+                                    </div>
+                                </div>
                                
                             </div>
                                                     

@@ -42,6 +42,7 @@
                             <th>Nombre de La sala</th>
                             <th>Direccion</th>
                             <th>RFC</th>
+                            <th>Fecha</th>
                             <th>Acciones</th>
 
                         </tr>
@@ -54,6 +55,7 @@
                             <td>{{$sala->nombre}}</td>
                             <td>{{$sala->direccion}}</td>
                             <td>{{$sala->rfc}}</td>
+                            <td>{{$sala->fecha}}</td>
                             <td>
                                 <a class="btn btn-success" href="#"><i class='bx bx-low-vision'></i></a>
                                 <a class="btn btn-info" href="{{route('salas.edit' , $sala->id)}}"><i class='bx bx-edit'></i></a>

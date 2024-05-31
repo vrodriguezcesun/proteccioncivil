@@ -264,7 +264,7 @@
             <p>Por haber participado y formado las brigadas de Protección Civil, acorde a los programas de capacitación
                 incorporados a la Secretaria del Trabajo y Previsión Social, la Dirección Estatal de Protección Civil y
                 la Secretaria de Salud de B.C. <label for=""></label>impartido en la Ciudad
-                de {{$sala->direccion}} B.C. {{ \Illuminate\Support\Carbon::parse()->translatedFormat('F') }}
+                de {{$sala->direccion}} B.C. {{$sala->fecha}}
                 de {{ \Carbon\Carbon::now()->year }}
                 .</p>
         </div>
@@ -272,7 +272,7 @@
         <div>
             <div class="centrado">
                 <div style="position: relative;">
-                    <img src="./img//firma3.jpg" style="position: absolute; top: 5%; left: 50%; transform: translate(-50%, -50%);">
+                    <!-- <img src="./img//firma3.jpg" style="position: absolute; top: 5%; left: 50%; transform: translate(-50%, -50%);"> -->
                     <p class="centrado letra" style="position: relative; z-index: 1;">Octavio Méndez Stoever</p>
                 </div>
             </div>
@@ -292,6 +292,7 @@
         </div>
 
     </div>
+    
 </body>
 
 </html>

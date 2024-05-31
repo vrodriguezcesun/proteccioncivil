@@ -13,5 +13,6 @@ class Sala extends Model
         'nombre',
         'direccion',
         'rfc',
+        'fecha',
 ];
 }

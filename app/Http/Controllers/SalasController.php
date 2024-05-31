@@ -51,6 +51,7 @@ class SalasController extends Controller
             'nombre' => 'required|string',
             'direccion' => 'nullable|string',
             'rfc' => 'nullable|string',
+            'fecha' => 'nullable|string',
 
         ]);
         // Crear un nuevo objeto Empleado con los datos del formulario
@@ -58,6 +59,7 @@ class SalasController extends Controller
         $sala->nombre = $request->nombre;
         $sala->direccion = $request->direccion;
         $sala->rfc = $request->rfc;
+        $sala->fecha = $request->fecha;
         // Guardar el objeto en la base de datos
         $sala->save();
         // Iniciar la sesión 'success'
@@ -89,7 +91,7 @@ class SalasController extends Controller
             'nombre' => 'nullable|string',
             'direccion' => 'nullable|string',
             'rfc' => 'nullable|string',
-
+            'fecha' => 'nullable|string',
 
 
         ]);
@@ -110,7 +112,7 @@ class SalasController extends Controller
             'nombre' => $request->nombre,
             'direccion' => $request->direccion,
             'rfc' => $request->rfc,
-
+            'fecha' => $request->fecha,
 
 
         ]);
