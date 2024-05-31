@@ -275,8 +275,8 @@
             <input type="text" class="form-control letra" value="{{ $empleado->nombre }} {{ $empleado->apellido }}" name="Name">
         </div>
         <div class="centro">
-            <p>Por haber participado y acreditado el curso de Procedimientos de Evacuacion, acorde a los programas de capacitación
-                incorporados a la Dirección de Bomberos del Municipio y la Secretaria del Trabajo y Previsión Social, impartido en la Ciudad
+            <p>Por haber participado y acreditado el curso de Procedimientos de Evacuación, acorde a los programas de capacitación
+                incorporados a la Dirección Estatal de Protección Civil en B.C., la Secretaria del Trabajo y Previsión Social, impartido en la Ciudad
                 de {{$empleado->ciudadeyr}}, B.C. el día {{ \Carbon\Carbon::parse($empleado->cursoeyri)->locale('es_ES')->isoFormat('LL') }}
 
                 .</p>
@@ -303,7 +303,7 @@
 
             <div class="centrado" style="position: relative;">
                 <div class="l2"></div>
-                <p class="centrado1 registro-ss">Registro SSA: IPRC0102-16</p>
+               
             </div>
         </div>
     </div>

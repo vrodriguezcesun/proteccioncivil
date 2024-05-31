@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Capacitaciones</title>
+    <!-- Especifica la ruta del nuevo icono -->
+    <link rel="icon" type="image/png" href="">
   <!-- Boostrap interno-->
   <link rel="stylesheet" href="{{ asset('/css1/bootstrap.min.css')}}">
   <!-- Css Personal -->
@@ -66,7 +68,7 @@
             </li>
             <li><a href="/conocenos"><span class="icon-notifications mr-3"></span>Conocenos</a></li>
             <li><a href="#"><span class="icon-location-arrow mr-3"></span>Directorio</a></li>
-            <li><a href="#"><span class="icon-pie-chart mr-3"></span>Stats</a></li>
+            
             <li><a href="/login"><span class="icon-sign-out mr-3"></span>Login</a></li>
           </ul>
         </div>

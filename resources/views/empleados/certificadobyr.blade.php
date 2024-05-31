@@ -276,14 +276,14 @@
         </div>
         <div class="centro">
             <p>Por haber participado y acreditado el curso de Busqueda y Rescate, acorde a los programas de capacitación
-                incorporados a la Dirección de Bomberos del Municipio y la Secretaria del Trabajo y Previsión Social, impartido en la Ciudad
-                de {{$empleado->ciudadbyr}}, B.C. el día {{ \Carbon\Carbon::parse($empleado->cursobyri)->locale('es_ES')->isoFormat('LL') }}
+                incorporados a la Dirección Estatal de Protección Civil en B.C. y la Secretaria del Trabajo y Previsión Social,
+                impartido en la Ciudad de {{$empleado->ciudadbyr}}, B.C. el día {{ \Carbon\Carbon::parse($empleado->cursobyri)->locale('es_ES')->isoFormat('LL') }}
 
                 .</p>
         </div>
         <br>
         <br>
-        <br>
+       
         
         <div class="">
             <br>

@@ -307,7 +307,7 @@
 
             <div class="centrado" style="position: relative;">
                 <div class="l2"></div>
-                <p class="centrado1 registro-ss">Registro SSA: IPRC0102-16</p>
+              
 
             </div>
 

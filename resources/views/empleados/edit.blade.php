@@ -9,7 +9,7 @@
                 <div class="card-body">
                     <div class="">
                         <div class="modal-header">
-                            <h3 class="modal-title" style="float: left;">Informacion General</h3>
+                            <h3 class="modal-title" style="float: left;">Información General</h3>
                         </div>
                         <form action="{{ route('empleados.update', $empleado->id) }}" method="POST">
                             @csrf
@@ -79,7 +79,7 @@
                                 </div>
                             </div>
                             <div class="modal-header">
-                                <h3 class="modal-title" style="float: left;">Informacion de Capacitaciones</h3>
+                                <h3 class="modal-title" style="float: left;">Información de Capacitaciones</h3>
                             </div>
                             <div class="form-group">
                                 <table class="table ml-2">
