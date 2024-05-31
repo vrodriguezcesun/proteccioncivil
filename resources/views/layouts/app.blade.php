@@ -16,12 +16,12 @@
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
     <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet">
-   
+
     <!-- Vendor CSS Files -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    
-  
+
+
     <!--Nuevo-->
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/img/favicon.png') }}">
     <link rel="stylesheet" href="{{ asset('/assets/css/bootstrap.min.css') }}">
@@ -31,7 +31,7 @@
     <!-- <link rel="stylesheet" href="{{ asset('/assets/css/dataTables.bootstrap4.min.css') }}"> -->
     <link rel="stylesheet" href="{{asset('/assets/css/select2.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/assets/css/bootstrap-datetimepicker.min.css') }}">
-    
+
     <link rel="stylesheet" href="{{ asset ('assets/css/toastr.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/fontawesome/css/all.min.css') }}">
     <!-- Google Fonts -->
@@ -72,17 +72,17 @@
     <script src="{{ asset ('assets/plugins/raphael/raphael.min.js') }}"></script>
     <script src="{{ asset ('assets/js/chart.js') }}"></script>
     <script src="{{ asset ('assets/js/select2.min.js') }}"></script>
-   <!--  <script src="{{ asset ('assets/js/jquery.dataTables.min.js') }}"></script> -->
-   <!--  <script src="{{ asset ('assets/js/dataTables.bootstrap4.min.js') }}"></script> -->
+    <!--  <script src="{{ asset ('assets/js/jquery.dataTables.min.js') }}"></script> -->
+    <!--  <script src="{{ asset ('assets/js/dataTables.bootstrap4.min.js') }}"></script> -->
     <script src="{{ asset ('assets/js/moment.min.js') }}"></script>
     <script src="{{ asset ('assets/js/bootstrap-datetimepicker.min.js') }}"></script>
     <script src="{{ asset ('assets/plugins/fileupload/fileupload.min.js') }}"></script>
     <script src="{{ asset ('assets/js/app.js') }}"></script>
     <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
-     
-    
+
+
     <!-- //Data Tables -->
-   
+
     <script src="https://cdn.datatables.net/2.0.7/js/dataTables.js"></script>
     <script src="https://cdn.datatables.net/2.0.7/js/dataTables.bootstrap5.js"></script>
 
@@ -112,121 +112,121 @@
             });
         });
     </script>
- <!-- // Funcion de sweetalert2 para enviar formulario de registro de empleado -->
-<script>
-    $(document).ready(function() {
-        // Listen for the form submission event
-        $('#enviarlo').click(function(e) {
-            // Prevent the form from submitting automatically
-            e.preventDefault();
+    <!-- // Funcion de sweetalert2 para enviar formulario de registro de empleado -->
+    <script>
+        $(document).ready(function() {
+            // Listen for the form submission event
+            $('#enviarlo').click(function(e) {
+                // Prevent the form from submitting automatically
+                e.preventDefault();
 
-            // Display the SweetAlert
-            Swal.fire({
-                position: 'top-center',
-                icon: 'success',
-                title: '¡Empleado registrado!',
-                showConfirmButton: false,
-                timer: 1500
-            }).then(() => {
-                // Submit the form after the timer
-                $(this).closest('form').submit();
+                // Display the SweetAlert
+                Swal.fire({
+                    position: 'top-center',
+                    icon: 'success',
+                    title: '¡Empleado registrado!',
+                    showConfirmButton: false,
+                    timer: 1500
+                }).then(() => {
+                    // Submit the form after the timer
+                    $(this).closest('form').submit();
+                });
             });
         });
-    });
-</script>
- <!-- // Funcion de sweetalert2 para enviar formulario de registro de empleado -->
- <script>
-    $(document).ready(function() {
-        // Listen for the form submission event
-        $('#enviarlosala').click(function(e) {
-            // Prevent the form from submitting automatically
-            e.preventDefault();
+    </script>
+    <!-- // Funcion de sweetalert2 para enviar formulario de registro de empleado -->
+    <script>
+        $(document).ready(function() {
+            // Listen for the form submission event
+            $('#enviarlosala').click(function(e) {
+                // Prevent the form from submitting automatically
+                e.preventDefault();
 
-            // Display the SweetAlert
-            Swal.fire({
-                position: 'top-center',
-                icon: 'success',
-                title: '¡Sala registrada!',
-                showConfirmButton: false,
-                timer: 1500
-            }).then(() => {
-                // Submit the form after the timer
-                $(this).closest('form').submit();
+                // Display the SweetAlert
+                Swal.fire({
+                    position: 'top-center',
+                    icon: 'success',
+                    title: '¡Sala registrada!',
+                    showConfirmButton: false,
+                    timer: 1500
+                }).then(() => {
+                    // Submit the form after the timer
+                    $(this).closest('form').submit();
+                });
             });
         });
-    });
-</script>
+    </script>
 
-<!-- // Funcion de sweetalert2 para enviar formulario de registro de puesto -->
+    <!-- // Funcion de sweetalert2 para enviar formulario de registro de puesto -->
 
-<script>
-    $(document).ready(function() {
-        // Listen for the form submission event
-        $('#enviarlopuesto').click(function(e) {
-            // Prevent the form from submitting automatically
-            e.preventDefault();
+    <script>
+        $(document).ready(function() {
+            // Listen for the form submission event
+            $('#enviarlopuesto').click(function(e) {
+                // Prevent the form from submitting automatically
+                e.preventDefault();
 
-            // Display the SweetAlert
-            Swal.fire({
-                position: 'top-center',
-                icon: 'success',
-                title: '¡Puesto registrado!',
-                showConfirmButton: false,
-                timer: 1500
-            }).then(() => {
-                // Submit the form after the timer
-                $(this).closest('form').submit();
+                // Display the SweetAlert
+                Swal.fire({
+                    position: 'top-center',
+                    icon: 'success',
+                    title: '¡Puesto registrado!',
+                    showConfirmButton: false,
+                    timer: 1500
+                }).then(() => {
+                    // Submit the form after the timer
+                    $(this).closest('form').submit();
+                });
             });
         });
-    });
-</script>
- <!-- // Funcion de sweetalert2 para enviar formulario de edicion de empleado -->
- <script>
-    $(document).ready(function() {
-        // Listen for the form submission event
-        $('#editar').click(function(e) {
-            // Prevent the form from submitting automatically
-            e.preventDefault();
+    </script>
+    <!-- // Funcion de sweetalert2 para enviar formulario de edicion de empleado -->
+    <script>
+        $(document).ready(function() {
+            // Listen for the form submission event
+            $('#editar').click(function(e) {
+                // Prevent the form from submitting automatically
+                e.preventDefault();
 
-            // Display the SweetAlert
-            Swal.fire({
-                position: 'top-center',
-                icon: 'success',
-                title: '¡Empleado editado!',
-                showConfirmButton: false,
-                timer: 1500
-            }).then(() => {
-                // Submit the form after the timer
-                $(this).closest('form').submit();
+                // Display the SweetAlert
+                Swal.fire({
+                    position: 'top-center',
+                    icon: 'success',
+                    title: '¡Empleado editado!',
+                    showConfirmButton: false,
+                    timer: 1500
+                }).then(() => {
+                    // Submit the form after the timer
+                    $(this).closest('form').submit();
+                });
             });
         });
-    });
-</script>
+    </script>
 
- <!-- // Funcion de sweetalert2 para enviar formulario de edicion puestos -->
- <script>
-    $(document).ready(function() {
-        // Listen for the form submission event
-        $('#editarpuesto').click(function(e) {
-            // Prevent the form from submitting automatically
-            e.preventDefault();
+    <!-- // Funcion de sweetalert2 para enviar formulario de edicion puestos -->
+    <script>
+        $(document).ready(function() {
+            // Listen for the form submission event
+            $('#editarpuesto').click(function(e) {
+                // Prevent the form from submitting automatically
+                e.preventDefault();
 
-            // Display the SweetAlert
-            Swal.fire({
-                position: 'top-center',
-                icon: 'success',
-                title: '¡Puesto editado!',
-                showConfirmButton: false,
-                timer: 1500
-            }).then(() => {
-                // Submit the form after the timer
-                $(this).closest('form').submit();
+                // Display the SweetAlert
+                Swal.fire({
+                    position: 'top-center',
+                    icon: 'success',
+                    title: '¡Puesto editado!',
+                    showConfirmButton: false,
+                    timer: 1500
+                }).then(() => {
+                    // Submit the form after the timer
+                    $(this).closest('form').submit();
+                });
             });
         });
-    });
-</script>
+    </script>
 
-    
+
 
     <script>
         $(document).ready(function() {
@@ -252,46 +252,82 @@
         });
     </script>
 
-<script>
-    $(document).ready(function() {
-        // Listen for the delete button click event
-        $('.delete-button').click(function(e) {
-            // Prevent the default button action
-            e.preventDefault();
+    <script>
+        $(document).ready(function() {
+            // Listen for the delete button click event
+            $('.delete-button').click(function(e) {
+                // Prevent the default button action
+                e.preventDefault();
 
-            // Get the closest form to the clicked button
-            var form = $(this).closest('form');
+                // Get the closest form to the clicked button
+                var form = $(this).closest('form');
 
-            // Display the SweetAlert confirmation dialog
-            Swal.fire({
-                title: '¿Estás seguro?',
-                text: "¡No podrás revertir esto!",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Sí, eliminarlo',
-                cancelButtonText: 'Cancelar'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    // If the user confirms, submit the form
-                    form.submit();
-                }
+                // Display the SweetAlert confirmation dialog
+                Swal.fire({
+                    title: '¿Estás seguro?',
+                    text: "¡No podrás revertir esto!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Sí, eliminarlo',
+                    cancelButtonText: 'Cancelar'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // If the user confirms, submit the form
+                        form.submit();
+                    }
+                });
             });
         });
-    });
-</script>
+    </script>
 
 
 
-<script>
-     $(document).ready(function() {
-        $('#buscar').DataTable({
-            responsive: true,
-            autoWidth: false // Evita que DataTables ajuste automáticamente el ancho de la tabla
+    <script>
+        $(document).ready(function() {
+            $('#buscar').DataTable({
+                responsive: true,
+                autoWidth: false // Evita que DataTables ajuste automáticamente el ancho de la tabla
+            });
         });
-    });
-</script>
+    </script>
+
+<!-- Metodo para destrurir sesion por inactividad por 4 minutos-->
+    <script>
+        var idleTime = 0;
+        $(document).ready(function() {
+            // Incrementa el contador de inactividad cada minuto
+            var idleInterval = setInterval(timerIncrement, 60000); // 1 minuto
+
+            // Reinicia el contador de inactividad cuando se detecta actividad
+            $(this).mousemove(function(e) {
+                idleTime = 0;
+            });
+            $(this).keypress(function(e) {
+                idleTime = 0;
+            });
+        });
+
+        function timerIncrement() {
+            idleTime = idleTime + 1;
+            if (idleTime > 3) { // Cambia este valor según tus necesidades (3 minuto en este caso)
+                // Hacer una solicitud AJAX para cerrar la sesión
+                $.ajax({
+                    url: '/logout', // La ruta a tu controlador o ruta de logout
+                    type: 'POST',
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') // Asegúrate de enviar el token CSRF
+                    },
+                    success: function(data) {
+                        // Redireccionar a la página de inicio de sesión u otra página
+                        window.location.href = '/login';
+                    }
+                });
+            }
+        }
+    </script>
+
 
 </body>
 
