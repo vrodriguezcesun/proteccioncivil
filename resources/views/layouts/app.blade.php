@@ -293,7 +293,7 @@
         });
     </script>
 
-<!-- Metodo para destrurir sesion por inactividad por 4 minutos-->
+<!-- Metodo para destrurir sesion por inactividad por 10 minutos-->
     <script>
         var idleTime = 0;
         $(document).ready(function() {
@@ -311,7 +311,7 @@
 
         function timerIncrement() {
             idleTime = idleTime + 1;
-            if (idleTime > 3) { // Cambia este valor según tus necesidades (3 minuto en este caso)
+            if (idleTime > 10) { // Cambia este valor según tus necesidades (10 minuto en este caso)
                 // Hacer una solicitud AJAX para cerrar la sesión
                 $.ajax({
                     url: '/logout', // La ruta a tu controlador o ruta de logout
@@ -321,7 +321,7 @@
                     },
                     success: function(data) {
                         // Redireccionar a la página de inicio de sesión u otra página
-                        window.location.href = '/login';
+                        window.location.href = '/';
                     }
                 });
             }

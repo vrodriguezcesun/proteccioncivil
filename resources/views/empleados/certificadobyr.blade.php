@@ -119,7 +119,7 @@
         }
 
         .centro {
-            text-justify: auto;
+            
             margin-left: 0px;
             margin-bottom: 0px;
             padding: 0px;
@@ -128,9 +128,11 @@
 
         .letra {
             font-family: Arial, sans-serif;
-            font-weight: bold;
-            font-size: 50px;
-
+    font-weight: bold;
+    font-size: 50px;
+    white-space: nowrap; /* Evita que el texto se divida en múltiples líneas */
+    overflow: hidden; /* Oculta el texto que desborda el contenedor */
+    text-overflow: ellipsis; /* Muestra puntos suspensivos (...) para indicar texto truncado */
         }
 
 
@@ -289,7 +291,7 @@
             <br>
             <div class="centrado">
                 <div style="position: relative;">
-                   <img src="./img/firma2.jpg" style="position: absolute; top: 5%; left: 50%; transform: translate(-50%, -50%);">
+                  <!--  <img src="./img/firma2.jpg" style="position: absolute; top: 5%; left: 50%; transform: translate(-50%, -50%);"> -->
                     <p class="centrado letra" style="position: relative; z-index: 1;">Octavio Méndez Stoever</p>
                 </div>
             </div>
