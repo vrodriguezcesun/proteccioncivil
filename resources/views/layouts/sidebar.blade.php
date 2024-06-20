@@ -45,7 +45,11 @@
                         <li class="submenu">
                             <a href="#"><span> Empleados </span> <span class="menu-arrow"></span></a>
                             <ul style="display: active;">
-                           
+                            <li class="">
+                                    <a class="{{$pagina == 'empleados.dashboard' ? 'active' : ''}}" href="{{url('empleados/dashboard')}}">
+                                        <i class="bi bi-circle"></i><span>DashBoard</span>
+                                    </a>
+                                </li>
                                 <li class="">
                                     <a class="{{$pagina == 'empleados' ? 'active' : ''}}" href="{{url('empleados')}}">
                                         <i class="bi bi-circle"></i><span>Empleados</span>
@@ -63,6 +67,8 @@
                                         <i class="bi bi-circle"></i><span>Editar Empleados</span>
                                     </a>
                                 </li>
+                               
+                           
                             </ul>
                         </li>
                         <li class="submenu">

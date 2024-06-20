@@ -141,7 +141,7 @@
                                         <tr>
                                            
                                             <td>
-                                                <input type="text" class="form-control" name="cursomyue" value="{{ $empleado->cursomyue }}" onmouseout="this.placeholder = 'Ingrese Manejo y Uso'">
+                                                <input type="text" class="form-control" name="cursomyue" value="{{ $empleado->cursomyue }}" onmouseout="this.placeholder = 'Ingrese Uso y Manejo de Extintores'">
                                             </td>
                                             <td>
                                                 <input type="date" class="form-control" name="cursomyuei" value="{{ $empleado->cursomyuei }}">

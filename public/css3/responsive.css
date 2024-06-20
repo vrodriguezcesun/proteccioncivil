@@ -358,7 +358,9 @@
 	.inner-hmv{
 		margin-bottom: 30px;
 	}
-	
+	.contenedor{
+		display: flex;
+	}
 }
 
 

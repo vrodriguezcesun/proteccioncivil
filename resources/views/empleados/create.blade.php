@@ -17,7 +17,7 @@
                                 <div class="form-group col-md-2">
                                     <div class="col-sm-12 pl-0 pr-0">
                                         <label for="" class="col-sm-12 pl-0 pr-0">No.Empleado</label>
-                                        <input type="text" class="form-control" id="empleado" name="empleado" required>
+                                        <input type="text" class="form-control" id="empleado" name="empleado">
 
                                     </div>
                                 </div>
@@ -142,6 +142,7 @@
                                             <option value="" selected disabled>Selecciona una Ciudad</option>
                                             <option value="Ensenada">Ensenada</option>
                                             <option value="Mexicali">Mexicali</option>
+                                            <option value="Mexicali">Rosarito</option>
                                             <option value="Tecate">Tecate</option>
                                             <option value="Tijuana">Tijuana</option>
 
@@ -150,13 +151,12 @@
                                     </div>
                                 </div>
 
-
                             </div>
 
                             <div class="row g-1 ml-2">
                                 <div class="form-check form-check-inline col-3 mr-0 px-0">
-                                    <input class="form-check-input" type="checkbox" name="cursomyue" value="Manejo de Extintores">
-                                    <label class="form-check-label">Manejo de Extintores</label>
+                                    <input class="form-check-input" type="checkbox" name="cursomyue" value="Uso y Manejo de Extintores">
+                                    <label class="form-check-label">Uso y Manejo de Extintores</label>
                                 </div>
                                 <div class="form-group col-md-3 ml-0">
                                     <div class="form-group">
@@ -177,6 +177,7 @@
                                             <option value="" selected disabled>Selecciona una Ciudad</option>
                                             <option value="Ensenada">Ensenada</option>
                                             <option value="Mexicali">Mexicali</option>
+                                            <option value="Mexicali">Rosarito</option>
                                             <option value="Tecate">Tecate</option>
                                             <option value="Tijuana">Tijuana</option>
 
@@ -210,6 +211,7 @@
                                             <option value="" selected disabled>Selecciona una Ciudad</option>
                                             <option value="Ensenada">Ensenada</option>
                                             <option value="Mexicali">Mexicali</option>
+                                            <option value="Mexicali">Rosarito</option>
                                             <option value="Tecate">Tecate</option>
                                             <option value="Tijuana">Tijuana</option>
 

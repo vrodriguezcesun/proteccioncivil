@@ -7,33 +7,12 @@
     
             <div class="card-body">
                 <div id="main" class="main">
-                    <!-- <div class="form-row">
+                 
                     <div class="mb-2">
                         <a class="btn btn-outline-primary" href="{{url('empleados/create')}}">Nuevo</a>
 
                     </div>
-                        <div class="col-sm-8 my-1">
-                            <input type="text" class="form-control" name="texto">
-                        </div>
-                        <div class="col-auto">
-                            <input type="submit" class="btn btn-outline-primary ml-auto my-1" value="Buscar">
-                        </div>
-                    </div> -->
-                    <div class="mb-2">
-                        <a class="btn btn-outline-primary" href="{{url('empleados/create')}}">Nuevo</a>
-
-                    </div>
-                   <!--  <form action="{{ route('empleados.index') }}" method="get">
-                        <div class="form-row">
-
-                            <div class="col-sm-8 my-1">
-                                <input type="text" class="form-control" name="texto">
-                            </div>
-                            <div class="col-auto">
-                                <input type="submit" class="btn btn-outline-primary ml-auto my-1" value="Buscar">
-                            </div>
-                        </div>
-                    </form> -->
+                 
                     <div class="table-responsive">
                     <table id="buscar" class="table table-striped" style="width:100%">
                             <thead>
@@ -41,7 +20,6 @@
                                     <th style="display: none;">ID</th>
                                     <th>No.</th>
                                     <th>Nombre Completo</th>
-                                    
                                     <th>Puesto</th>
                                     <th>Sala</th>
                                     <th>Fecha</th>

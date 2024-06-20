@@ -9,6 +9,7 @@ use App\Models\Sala;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Carbon\Carbon;
 
+
 class EmpleadoController extends Controller
 {
     /**
@@ -49,18 +50,20 @@ class EmpleadoController extends Controller
         return view('empleados.create', compact('salas', 'empleado', 'puestos'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+   public function show(){
+
+   }
+
+
     public function store(Request $request)
     {
         // Validar los datos del formulario
         $request->validate([
-            'empleado' => 'required|numeric',
+            'empleado' => 'nullable|numeric',
             'nombre' => 'required|string',
             'puesto' => 'required|string',
             'sala' => 'required|string',
-            'email' => 'required|email',
+            'email' => 'nullable|string',
             'curp' => 'nullable|string',
             'telefono' => 'nullable|string',
             'cursopa' => 'nullable|string',
@@ -116,17 +119,82 @@ class EmpleadoController extends Controller
         return redirect()->route('empleados.index')->with('success', 'Empleado creado exitosamente.');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+   
+    public function dashboard(Request $request)
     {
-        //
+        $sala = $request->input('sala');
+        $curso = $request->input('curso');
+        $fecha = $request->input('fecha');
+        $salas = Sala::all();
+    
+        // Construir la consulta
+        $query = Empleado::query();
+    
+        if ($sala) {
+            $query->where('sala', 'LIKE', '%' . $sala . '%');
+        }
+    
+        if ($curso) {
+            switch ($curso) {
+                case 'Primeros Auxilios':
+                    $query->where('cursopa', 'Primeros Auxilios');
+                    if ($fecha) {
+                        $query->whereDate('cursopai', $fecha);
+                    }
+                    break;
+                case 'Busqueda y Rescate':
+                    $query->where('cursobyr', 'Busqueda y Rescate');
+                    if ($fecha) {
+                        $query->whereDate('cursobyri', $fecha);
+                    }
+                    break;
+                case 'Uso y Manejo de Extintores':
+                    $query->where('cursomyue', 'Uso y Manejo de Extintores');
+                    if ($fecha) {
+                        $query->whereDate('cursomyuei', $fecha);
+                    }
+                    break;
+                case 'Procedimientos de Evacuacion':
+                    $query->where('cursoeyr', 'Procedimientos de Evacuacion');
+                    if ($fecha) {
+                        $query->whereDate('cursoeyri', $fecha);
+                    }
+                    break;
+            }
+        }
+    
+        $empleados = $query->get();
+                
+        $cant_empleados = Empleado::count();
+        $cant_empleados_capacitados = Empleado::where(function ($query) {
+            $query->whereNotNull('cursopa')->where('cursopa', '!=', '')
+                ->orWhereNotNull('cursobyr')->where('cursobyr', '!=', '')
+                ->orWhereNotNull('cursomyue')->where('cursomyue', '!=', '')
+                ->orWhereNotNull('cursoeyr')->where('cursoeyr', '!=', '');
+        })->count();
+    
+        $cant_primerosauxilios = Empleado::where('cursopa', 'LIKE', '%Primeros Auxilios%')->count();
+        $cant_busquedayrescate = Empleado::where('cursobyr', 'LIKE', '%Busqueda y Rescate%')->count();
+        $cant_myue = Empleado::where('cursomyue', 'LIKE', '%Uso y Manejo de Extintores%')->count();
+        $cant_eyr = Empleado::where('cursoeyr', 'LIKE', '%Procedimientos de Evacuacion%')->count();
+        $total_capacitaciones = $cant_primerosauxilios + $cant_busquedayrescate + $cant_myue + $cant_eyr;
+    
+        return view('empleados.dashboard', compact(
+            'cant_empleados',
+            'cant_primerosauxilios',
+            'cant_busquedayrescate',
+            'cant_myue',
+            'cant_eyr',
+            'total_capacitaciones',
+            'cant_empleados_capacitados',
+            'empleados',
+            'curso',
+            'fecha',
+            'salas',
+        ));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+  
     public function edit($id)
     {
         $empleado = Empleado::find($id);
@@ -145,7 +213,7 @@ class EmpleadoController extends Controller
             'nombre' => 'nullable|string',
             'puesto' => 'nullable|string',
             'sala' => 'nullable|string',
-            'email' => 'nullable|email',
+            'email' => 'nullable|string',
             'curp' => 'nullable|string',
             'telefono' => 'nullable|string',
             'cursopa' => 'nullable|string',
@@ -206,7 +274,7 @@ class EmpleadoController extends Controller
 
         ]);
 
-        return redirect()->route('empleados.index');
+        return back()->with('success', 'Registro actualizado exitosamente.');
     }
 
 
@@ -262,8 +330,6 @@ class EmpleadoController extends Controller
         // Descarga el PDF con un nombre específico (por ejemplo, el nombre del empleado)
         return $pdf->setPaper('letter', 'landscape')->stream('Certificado Primeros Auxilios ' . $empleado->nombre . ' ' . $empleado->apellido . '.pdf');
     }
-
-
 
 
     public function generateCertificateME($id)
@@ -343,4 +409,7 @@ class EmpleadoController extends Controller
         // Descarga el PDF con un nombre específico (por ejemplo, el nombre del empleado)
         return $pdf->setPaper('letter', 'landscape')->stream('Certificado Evacuacion y Rescate ' . $empleado->nombre . ' ' . $empleado->apellido . '.pdf');
     }
+
+
+    
 }

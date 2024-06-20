@@ -29,14 +29,17 @@ Route::get('/primerosauxilios/plan', [PrimerosAuxiliosController::class, 'plan']
 Route::get('primerosauxilios/revisiongeneral/evaluacion', [PrincipalController::class, 'evaluacion']);
 Route::resource('primerosauxilios/registrarse', RegistroController::class)->names('registro');
 
-Route::resource('/usuarios', UsuarioController::class)->names('usuarios');
 
+Route::resource('/usuarios', UsuarioController::class)->names('usuarios');
+Route::get('empleados/dashboard', [EmpleadoController::class, 'dashboard'])->name('empleados.dashboard');;
 //Ruta para ver empleados con el administrador
 Route::resource('/empleados', EmpleadoController::class)->names('empleados');
 Route::get('empleados/{id}/certificado', [EmpleadoController::class, 'generateCertificate'])->name('empleados.certificado');
 Route::get('empleados/{id}/certificadoME', [EmpleadoController::class, 'generateCertificateME'])->name('empleados.certificadoME');
 Route::get('empleados/{id}/certificadobyr', [EmpleadoController::class, 'generateCertificatebyr'])->name('empleados.certificadobyr');
 Route::get('empleados/{id}/certificadoeyr', [EmpleadoController::class, 'generateCertificateeyr'])->name('empleados.certificadoeyr');
+Route::get('/generar-certificado-pdf', [EmpleadoController::class, 'generarCertificado'])->name('empleados.generarcertificado');
+
 
 
 //Ruta para ver puestos
