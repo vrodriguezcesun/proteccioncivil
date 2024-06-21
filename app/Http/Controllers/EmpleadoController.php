@@ -37,7 +37,7 @@ class EmpleadoController extends Controller
 
 
     public function create()
-    {   // Obtener todas las salas disponibles
+    {   // Obtener todas puestos disponibles
         $puestos = Puesto::all();
 
         // Obtener todas las salas disponibles
