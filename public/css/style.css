@@ -1280,3 +1280,17 @@ h6 {
 #main3{
   margin-left: 170 px;
 }
+
+/*fondo del formulario modal de Evaluacion*/
+.bg-blue{
+  background-color: rgba(211, 31, 31, 0.751);
+  color: white; /* Para que el texto sea visible en el fondo azul */
+ }
+
+ /* Ajusta columnas de la edicion de informacion de equipos de salas */
+ .col-cantidad {
+  width: 20px; /* Ajusta este valor según lo que necesites */
+}
+.col-descripcion {
+  width: 450px; /* Ajusta este valor según lo que necesites */
+}

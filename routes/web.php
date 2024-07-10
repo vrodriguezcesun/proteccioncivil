@@ -10,6 +10,7 @@ use App\Http\Controllers\RegistroController;
 use App\Http\Controllers\PuestosController;
 use App\Http\Controllers\SalasController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\BusquedaYRescateController;
 
 /* Route::get('/', function () {
     return view('principal');
@@ -61,6 +62,15 @@ Route::prefix('primerosauxilios')->group(function () {
     Route::get('/revisiongeneral/circulacion', [PrimerosAuxiliosController::class, 'circulacion']);
     Route::get('/revisiongeneral/oxigenacion', [PrimerosAuxiliosController::class, 'oxigenacion']);
 });
+
+Route::prefix('busquedayrescate')->group(function () {
+    Route::get('/introduccionbyr', [BusquedaYRescateController::class, 'introduccionbyr']);
+
+
+
+});
+
+
 
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout')->middleware('auth');
 // Nueva ruta GET que redirige a la ruta POST de logout

@@ -52,6 +52,14 @@ class SalasController extends Controller
             'direccion' => 'nullable|string',
             'rfc' => 'nullable|string',
             'fecha' => 'nullable|string',
+            'cantidad' => 'nullable|string',
+            'descripcion' => 'nullable|string',
+            'marca' => 'nullable|string',
+            'modelo' => 'nullable|string',
+            'cantdet' => 'nullable|string',
+            'descripciondet' => 'nullable|string',
+            'marcadet' => 'nullable|string',
+            'modelodet' => 'nullable|string',
 
         ]);
         // Crear un nuevo objeto Empleado con los datos del formulario
@@ -60,6 +68,14 @@ class SalasController extends Controller
         $sala->direccion = $request->direccion;
         $sala->rfc = $request->rfc;
         $sala->fecha = $request->fecha;
+        $sala->cantidad = $request->cantidad;
+        $sala->descripcion = $request->descripcion;
+        $sala->marca = $request->marca;
+        $sala->modelo = $request->modelo;
+        $sala->cantdet = $request->cantdet;
+        $sala->descripciondet = $request->descripciondet;
+        $sala->marcadet = $request->marcadet;
+        $sala->modelodet = $request->modelodet;
         // Guardar el objeto en la base de datos
         $sala->save();
         // Iniciar la sesión 'success'
@@ -92,7 +108,14 @@ class SalasController extends Controller
             'direccion' => 'nullable|string',
             'rfc' => 'nullable|string',
             'fecha' => 'nullable|string',
-
+            'cantidad' => 'nullable|string',
+            'descripcion' => 'nullable|string',
+            'marca' => 'nullable|string',
+            'modelo' => 'nullable|string',
+            'catdet' => 'nullable|string',
+            'descripciondet' => 'nullable|string',
+            'marcadet' => 'nullable|string',
+            'modelodet' => 'nullable|string',
 
         ]);
 
@@ -113,6 +136,14 @@ class SalasController extends Controller
             'direccion' => $request->direccion,
             'rfc' => $request->rfc,
             'fecha' => $request->fecha,
+            'cantidad' => $request->cantidad,
+            'descripcion' => $request->descripcion,
+            'marca' => $request->marca,
+            'modelo' => $request->modelo,
+            'cantdet' => $request->cantdet,
+            'descripciondet' => $request->descripciondet,
+            'marcadet' => $request->marcadet,
+            'modelodet' => $request->modelodet,
 
 
         ]);

@@ -57,7 +57,7 @@ class EmpleadoController extends Controller
 
     public function store(Request $request)
     {
-        // Validar los datos del formulario
+        // Validar los datos del formulario de crear empleado
         $request->validate([
             'empleado' => 'nullable|numeric',
             'nombre' => 'required|string',

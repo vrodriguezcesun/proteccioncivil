@@ -14,5 +14,13 @@ class Sala extends Model
         'direccion',
         'rfc',
         'fecha',
+        'cantidad',
+        'descripcion',
+        'marca',
+        'modelo',
+        'cantdet',
+        'descripciondet',
+        'marcadet',
+        'modelodet',
 ];
 }

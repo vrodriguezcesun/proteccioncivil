@@ -291,7 +291,7 @@
                     <a href="#"><i class="la la-object-group"></i> <span> Busqueda y Rescate</span> <span class="menu-arrow"></span></a>
                     <ul style="display: none;">
                         <li class="">
-                            <a class="{{$pagina == 'introduccion' ? 'active' : ''}}" href="{{url ('primerosauxilios/introduccion')}}">
+                            <a class="{{$pagina == 'introduccionbyr' ? 'active' : ''}}" href="{{url ('busquedayrescate/introduccionbyr')}}">
                                 <i class="bi bi-circle"></i><span>Introduccion</span>
                             </a>
                         </li>
