@@ -411,5 +411,10 @@ class EmpleadoController extends Controller
     }
 
 
+
+
+    
+
+
     
 }

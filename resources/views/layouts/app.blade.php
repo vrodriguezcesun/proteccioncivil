@@ -202,6 +202,28 @@
             });
         });
     </script>
+    <!-- // Funcion de sweetalert2 para enviar formulario de edicion de sala -->
+    <script>
+        $(document).ready(function() {
+            // Listen for the form submission event
+            $('#editarsala').click(function(e) {
+                // Prevent the form from submitting automatically
+                e.preventDefault();
+
+                // Display the SweetAlert
+                Swal.fire({
+                    position: 'top-center',
+                    icon: 'success',
+                    title: '¡Sala editada!',
+                    showConfirmButton: false,
+                    timer: 1500
+                }).then(() => {
+                    // Submit the form after the timer
+                    $(this).closest('form').submit();
+                });
+            });
+        });
+    </script>
 
     <!-- // Funcion de sweetalert2 para enviar formulario de edicion puestos -->
     <script>

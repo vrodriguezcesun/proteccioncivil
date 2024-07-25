@@ -64,7 +64,7 @@
                                     @method('DELETE')
                                     <button type="button" class="btn btn-danger delete-button"><i class='bx bx-user-minus'></i></button>
                                 </form>
-                                <a class="btn" href="{{ route('salas.certificadosa', $sala->id) }}"><i class='bx bxs-file-pdf bx-md' style="color: red; font-size: 20px;"></i></a>
+                             
                               
                             </td>
 

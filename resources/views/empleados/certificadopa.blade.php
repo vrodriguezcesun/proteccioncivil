@@ -242,9 +242,8 @@
 
         </div>
         <br>
-
         <br>
-
+<br>
         <div class="grupocaliente">
             Grupo Caliente <br>
             Departamento de Protección Civil
@@ -268,7 +267,7 @@
         </div>
         <br>
         <br>
-        <br>
+        
         <div>
             <br>
             <div class="centrado">

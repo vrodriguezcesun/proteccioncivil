@@ -47,7 +47,23 @@ Route::get('/generar-certificado-pdf', [EmpleadoController::class, 'generarCerti
 Route::resource('/puestos', PuestosController::class)->names('puestos');
 //Ruta para ver salas
 Route::resource('/salas', SalasController::class)->names('salas');
+//Ruta para general PDF
 Route::get('salas/{id}/certificadosa', [SalasController::class, 'generateCertificate'])->name('salas.certificadosa');
+//Ruta para general PDF de Reporte de cursos
+Route::get('salas/{id}/reportecursos', [SalasController::class, 'reportepdf'])->name('salas.reportecursos');
+//Ruta para generar Cosntancias PDF de Primeros Auxilios
+Route::get('salas/{id}/constancias', [SalasController::class, 'certificadosPA'])->name('salas.certificadospa');
+//Ruta para generar Cosntancias PDF de Busqueda y Rescate
+Route::get('salas/{id}/constanciasbyr', [SalasController::class, 'certificadosBYR'])->name('salas.certificadosbyr');
+//Ruta para generar Cosntancias PDF de Manejo y Uso de Extintores
+Route::get('salas/{id}/constanciasmyue', [SalasController::class, 'certificadosmyue'])->name('salas.certificadosmyue');
+//Ruta para generar Cosntancias PDF de Evacuacion y Rescate
+Route::get('salas/{id}/constanciaseyr', [SalasController::class, 'certificadoseyr'])->name('salas.certificadoseyr');
+//Ruta para generar Cosntancias PDF de Directorio de Unidad Interna
+Route::get('salas/{id}/constanciasui', [SalasController::class, 'certificadosui'])->name('salas.certificadosui');
+
+
+
 
 
 Route::prefix('primerosauxilios')->group(function () {
@@ -67,10 +83,11 @@ Route::prefix('busquedayrescate')->group(function () {
     Route::get('/introduccionbyr', [BusquedaYRescateController::class, 'introduccionbyr']);
 
 
-
 });
 
-
+Route::get('/salas/{id}', [SalasController::class, 'show'])->name('salas.show');
+Route::post('/salas/{id}/filter', [SalasController::class, 'filterEmpleados'])->name('salas.filter');
+Route::post('/salas/{id}/pdf', [SalasController::class, 'generatePdf'])->name('salas.pdf');
 
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout')->middleware('auth');
 // Nueva ruta GET que redirige a la ruta POST de logout

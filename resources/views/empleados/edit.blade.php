@@ -59,13 +59,7 @@
                                 </div>
 
 
-
-                                <!-- <div class="form-group col-md-3">
-                                    <div class="col-sm-12 pl-0 pr-0">
-                                        <label for="sala" class="col-sm-12 pl-0 pr-0">Sala</label>
-                                        <input type="text" class="form-control" name="sala" value="{{ $empleado->sala }}">
-                                    </div>
-                                </div> -->
+                             
                                 <div class="form-group col-md-4">
                                     <div class="col-sm-12 pl-0 pr-0">
                                         <label for="sala" class="col-sm-12 pl-0 pr-0">Sala</label>
@@ -161,7 +155,7 @@
                                         <tr>
                                           
                                             <td>
-                                                <input type="text" class="form-control" name="cursoeyr" value="{{ $empleado->cursoeyr }}" onmouseout="this.placeholder = 'Ingrese  y Evacuacion y Rescate'">
+                                                <input type="text" class="form-control" name="cursoeyr" value="{{ $empleado->cursoeyr }}" onmouseout="this.placeholder = 'Ingrese Procedimientos de Evacuacion'">
                                             </td>
                                             <td>
                                                 <input type="date" class="form-control" name="cursoeyri" value="{{ $empleado->cursoeyri }}">
