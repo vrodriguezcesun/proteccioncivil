@@ -7,7 +7,7 @@
     <title>Certificados</title>
 
     <style>
-    body {
+        body {
             margin-top: 5px;
             /* Ajusta el margen superior según sea necesario */
             margin-right: 5px;
@@ -107,10 +107,13 @@
             font-family: Arial, Helvetica, sans-serif;
             padding: 0 0 0 0;
             text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
 
         .centro {
-            
+
             margin-left: 0px;
             margin-bottom: 0px;
             padding: 0px;
@@ -119,11 +122,14 @@
 
         .letra {
             font-family: Arial, sans-serif;
-    font-weight: bold;
-    font-size: 50px;
-    white-space: nowrap; /* Evita que el texto se divida en múltiples líneas */
-    overflow: hidden; /* Oculta el texto que desborda el contenedor */
-    text-overflow: ellipsis; /* Muestra puntos suspensivos (...) para indicar texto truncado */
+            font-weight: bold;
+            font-size: 50px;
+            white-space: nowrap;
+            /* Evita que el texto se divida en múltiples líneas */
+            overflow: hidden;
+            /* Oculta el texto que desborda el contenedor */
+            text-overflow: ellipsis;
+            /* Muestra puntos suspensivos (...) para indicar texto truncado */
         }
 
         .centro label,
@@ -233,7 +239,7 @@
 </head>
 
 <body>
-@foreach ($empleados as $index => $empleado)
+    @foreach ($empleados as $index => $empleado)
     <div class="prueba">
         <div class="contenedor">
             <div class="l1">
@@ -256,42 +262,43 @@
 
         <div class="centro">
             <label class="a">A:</label>
-            <input type="text" class="form-control letra" value="{{ $empleado->nombre }}" name="Name">
+            <input type="text" class="form-control letra" value="{{ $empleado->nombre }}" name="Name" readonly>
         </div>
         <div class="centro">
-        <p>Por haber participado y acreditado el curso de Procedimientos de Evacuación, acorde a los programas de capacitación
+            <p>Por haber participado y acreditado el curso de Procedimientos de Evacuación, acorde a los programas de capacitación
                 incorporados a la Dirección Estatal de Protección Civil en B.C., la Secretaria del Trabajo y Previsión Social, impartido en la Ciudad
                 de {{$empleado->ciudadeyr}}, B.C. el día {{ \Carbon\Carbon::parse($empleado->cursoeyri)->locale('es_ES')->isoFormat('LL') }}
 
                 .</p>
         </div>
-        </div>
+    </div>
+    <br>
+    <div>
         <br>
-        <div>
-            <br>
-                    
-            <div class="centrado">
-                <p class="centrado letra" style="position: relative; z-index: 1;">Octavio Méndez Stoever</p>
-            </div>
-            <div class="centrado">
-                <p class="centrado">Instructor</p>
-            </div>
-            <div class="centrado">
-                <p class="centrado1">Registro STPS: MESO740121RS7-0005</p>
-            </div>
-            <div class="centrado">
-                <p class="centrado1">Registro DEPC: RAPCBC-018</p>
-            </div>
-            <div class="centrado" style="position: relative;">
-                <div class="l2"></div>
-                <!-- <p class="centrado1 registro-ss">Registro SSA: IPRC0102-16</p> -->
-            </div>
+
+        <div class="centrado">
+            <p class="centrado letra" style="position: relative; z-index: 1;">Octavio Méndez Stoever</p>
+        </div>
+        <div class="centrado">
+            <p class="centrado">Instructor</p>
+        </div>
+        <div class="centrado">
+            <p class="centrado1">Registro STPS: MESO740121RS7-0005</p>
+        </div>
+        <div class="centrado">
+            <p class="centrado1">Registro DEPC: RAPCBC-018</p>
+        </div>
+        <div class="centrado" style="position: relative;">
+            <div class="l2"></div>
+            <!-- <p class="centrado1 registro-ss">Registro SSA: IPRC0102-16</p> -->
         </div>
     </div>
+    </div>
     @if ($index < count($empleados) - 1)
-    <div style="page-break-after: always;"></div> <!-- Añade un salto de página solo si no es el último empleado -->
-    @endif
-    @endforeach
+        <div style="page-break-after: always;">
+        </div> <!-- Añade un salto de página solo si no es el último empleado -->
+        @endif
+        @endforeach
 </body>
 
 </html>
