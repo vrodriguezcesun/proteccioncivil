@@ -7,7 +7,7 @@
     <title>Certificados</title>
 
     <style>
-    body {
+        body {
             margin-top: 5px;
             /* Ajusta el margen superior según sea necesario */
             margin-right: 5px;
@@ -110,7 +110,7 @@
         }
 
         .centro {
-            
+
             margin-left: 0px;
             margin-bottom: 0px;
             padding: 0px;
@@ -119,11 +119,14 @@
 
         .letra {
             font-family: Arial, sans-serif;
-    font-weight: bold;
-    font-size: 50px;
-    white-space: nowrap; /* Evita que el texto se divida en múltiples líneas */
-    overflow: hidden; /* Oculta el texto que desborda el contenedor */
-    text-overflow: ellipsis; /* Muestra puntos suspensivos (...) para indicar texto truncado */
+            font-weight: bold;
+            font-size: 50px;
+            white-space: nowrap;
+            /* Evita que el texto se divida en múltiples líneas */
+            overflow: hidden;
+            /* Oculta el texto que desborda el contenedor */
+            text-overflow: ellipsis;
+            /* Muestra puntos suspensivos (...) para indicar texto truncado */
         }
 
         .centro label,
@@ -233,7 +236,7 @@
 </head>
 
 <body>
-    @foreach ($empleados as $empleado)
+    @foreach ($empleados as $index => $empleado)
     <div class="prueba">
         <div class="contenedor">
             <div class="l1">
@@ -259,7 +262,7 @@
             <input type="text" class="form-control letra" value="{{ $empleado->nombre }}" name="Name">
         </div>
         <div class="centro">
-        <p>Por haber participado y acreditado el curso de Busqueda y Rescate, acorde a los programas de capacitación
+            <p>Por haber participado y acreditado el curso de Busqueda y Rescate, acorde a los programas de capacitación
                 incorporados a la Dirección Estatal de Protección Civil en B.C. y la Secretaria del Trabajo y Previsión Social,
                 impartido en la Ciudad de {{$empleado->ciudadbyr}}, B.C. el día {{ \Carbon\Carbon::parse($empleado->cursobyri)->locale('es_ES')->isoFormat('LL') }}
                 .</p>
@@ -267,7 +270,7 @@
         <br>
         <div>
             <br>
-                    
+
             <div class="centrado">
                 <p class="centrado letra" style="position: relative; z-index: 1;">Octavio Méndez Stoever</p>
             </div>
@@ -286,8 +289,12 @@
             </div>
         </div>
     </div>
-    <div style="page-break-after: always;"></div> <!-- Añade un salto de página después de cada certificado -->
-    @endforeach
+    @if ($index < count($empleados) - 1)
+        <div style="page-break-after: always;">
+        </div> <!-- Añade un salto de página solo si no es el último empleado -->
+        @endif
+
+        @endforeach
 </body>
 
 </html>

@@ -16,9 +16,10 @@
         }
 
         .header h1 {
-            font-size: 18px;
+            font-size: 20px;
             margin: 0;
-            font-weight: normal; /* No bold */
+            font-weight: normal;
+            /* No bold */
         }
 
         .header h2 {
@@ -40,6 +41,8 @@
 
         .subtitulo .bold {
             font-weight: bold;
+            font-weight: normal;
+            /* No bold */
         }
 
         table {
@@ -62,12 +65,13 @@
         }
 
         .column-nombre {
-            width: 300px;
+            width: 250px;
         }
 
         .column-puesto {
-            width: 140px;
+            width: 150px;
         }
+
 
         .small-text {
             font-size: 0.8rem;
@@ -82,9 +86,9 @@
 
     </div>
     <div class="subtitulo">
-    <h2><span class="bold">Organismo/Institución:</span> {{ $sala->nombre }}</h2>
-        <h2>Domilicio: {{ $sala->direccion }}</h2>
-        <h2>Telefono: </h2>
+        <h2><span class="bold">Organismo/Institución:  </span>{{ $sala->sala }}</h2>
+        <h2><span class="bold">Domicilio:  </span> {{ $sala->direccion }}</h2>
+        <h2><span class="bold">Telefono:</span></h2>
     </div>
 
     <table>

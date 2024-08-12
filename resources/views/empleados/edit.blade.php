@@ -46,7 +46,7 @@
                                         <input type="text" class="form-control" name="telefono" value="{{ $empleado->telefono }}">
                                     </div>
                                 </div>
-                                   <div class="form-group col-md-3">
+                                <div class="form-group col-md-3">
                                     <div class="col-sm-12 pl-0 pr-0">
                                         <label for="puesto" class="col-sm-12 pl-0 pr-0">Puesto</label>
                                         <select name="puesto" class="form-control">
@@ -59,7 +59,7 @@
                                 </div>
 
 
-                             
+
                                 <div class="form-group col-md-4">
                                     <div class="col-sm-12 pl-0 pr-0">
                                         <label for="sala" class="col-sm-12 pl-0 pr-0">Sala</label>
@@ -79,7 +79,7 @@
                                 <table class="table ml-2">
                                     <thead>
                                         <tr>
-                                          
+
                                             <th>Curso</th>
                                             <th>Fecha Inicio</th>
                                             <th>Fecha Fin</th>
@@ -89,9 +89,14 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                           
+
                                             <td>
-                                                <input type="text" class="form-control" name="cursopa" value="{{ $empleado->cursopa }}" onmouseout="this.placeholder = 'Ingrese Primeros Auxilios'">
+                                                <!--  <input type="text" class="form-control" name="cursopa" value="{{ $empleado->cursopa }}" onmouseout="this.placeholder = 'Ingrese Primeros Auxilios'"> -->
+                                                <select class="form-control" name="cursopa">
+                                                    <option value="" {{ $empleado->cursopa == '' ? 'selected' : '' }}></option>
+                                                    <option value="Primeros Auxilios" {{ $empleado->cursopa == 'Primeros Auxilios' ? 'selected' : '' }}>Primeros Auxilios</option>
+                                                </select>
+
                                             </td>
                                             <td>
                                                 <input type="date" class="form-control" name="cursopai" value="{{ $empleado->cursopai }}">
@@ -100,7 +105,16 @@
                                                 <input type="date" class="form-control" name="cursopaf" value="{{ $empleado->cursopaf }}">
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control" name="ciudadpa" value="{{ $empleado->ciudadpa }}">
+                                                <!--  <input type="text" class="form-control" name="ciudadpa" value="{{ $empleado->ciudadpa }}"> -->
+
+                                                <select class="form-control" name="ciudadpa">
+                                                    <option value="" {{ $empleado->ciudadpa == '' ? 'selected' : '' }}></option>
+                                                    <option value="Ensenada" {{ $empleado->ciudadpa == 'Ensenada' ? 'selected' : '' }}>Ensenada</option>
+                                                    <option value="Mexicali" {{ $empleado->ciudadpa == 'Mexicali' ? 'selected' : '' }}>Mexicali</option>
+                                                    <option value="Rosarito" {{ $empleado->ciudadpa == 'Rosarito' ? 'selected' : '' }}>Rosarito</option>
+                                                    <option value="Tecate" {{ $empleado->ciudadpa == 'Tecate' ? 'selected' : '' }}>Tecate</option>
+                                                    <option value="Tijuana" {{ $empleado->ciudadpa == 'Tijuana' ? 'selected' : '' }}>Tijuana</option>
+                                                </select>
                                             </td>
 
                                             <td>
@@ -112,9 +126,13 @@
                                         </tr>
 
                                         <tr>
-                                          
+
                                             <td>
-                                                <input type="text" class="form-control" name="cursobyr" value="{{ $empleado->cursobyr }}" onmouseout="this.placeholder = 'Ingrese Busqueda y Rescate'">
+                                                <!-- <input type="text" class="form-control" name="cursobyr" value="{{ $empleado->cursobyr }}" onmouseout="this.placeholder = 'Ingrese Busqueda y Rescate'"> -->
+                                                <select class="form-control" name="cursobyr">
+                                                    <option value="" {{ $empleado->cursobyr == '' ? 'selected' : '' }}></option>
+                                                    <option value="Busqueda y Rescate" {{ $empleado->cursobyr == 'Busqueda y Rescate' ? 'selected' : '' }}>Busqueda y Rescate</option>
+                                                </select>
                                             </td>
                                             <td>
                                                 <input type="date" class="form-control" name="cursobyri" value="{{ $empleado->cursobyri }}">
@@ -123,7 +141,16 @@
                                                 <input type="date" class="form-control" name="cursobyrf" value="{{ $empleado->cursobyrf }}">
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control" name="ciudadbyr" value="{{ $empleado->ciudadbyr }}">
+                                                <!-- <input type="text" class="form-control" name="ciudadbyr" value="{{ $empleado->ciudadbyr }}"> -->
+
+                                                <select class="form-control" name="ciudadbyr">
+                                                    <option value="" {{ $empleado->ciudadbyr == '' ? 'selected' : '' }}></option>
+                                                    <option value="Ensenada" {{ $empleado->ciudadbyr == 'Ensenada' ? 'selected' : '' }}>Ensenada</option>
+                                                    <option value="Mexicali" {{ $empleado->ciudadbyr == 'Mexicali' ? 'selected' : '' }}>Mexicali</option>
+                                                    <option value="Rosarito" {{ $empleado->ciudadbyr == 'Rosarito' ? 'selected' : '' }}>Rosarito</option>
+                                                    <option value="Tecate" {{ $empleado->ciudadbyr == 'Tecate' ? 'selected' : '' }}>Tecate</option>
+                                                    <option value="Tijuana" {{ $empleado->ciudadbyr == 'Tijuana' ? 'selected' : '' }}>Tijuana</option>
+                                                </select>
                                             </td>
                                             <td>
                                                 <a href="{{ route('empleados.certificadobyr', $empleado->id) }}" style="display: flex; justify-content: left;">
@@ -133,9 +160,13 @@
                                         </tr>
 
                                         <tr>
-                                           
+
                                             <td>
-                                                <input type="text" class="form-control" name="cursomyue" value="{{ $empleado->cursomyue }}" onmouseout="this.placeholder = 'Ingrese Uso y Manejo de Extintores'">
+                                               <!--  <input type="text" class="form-control" name="cursomyue" value="{{ $empleado->cursomyue }}" onmouseout="this.placeholder = 'Ingrese Uso y Manejo de Extintores'"> -->
+                                               <select class="form-control" name="cursomyue">
+                                                    <option value="" {{ $empleado->cursomyue == '' ? 'selected' : '' }}></option>
+                                                    <option value="Uso y Manejo de Extintores" {{ $empleado->cursomyue == 'Uso y Manejo de Extintores' ? 'selected' : '' }}>Uso y Manejo de Extintores</option>
+                                                </select>
                                             </td>
                                             <td>
                                                 <input type="date" class="form-control" name="cursomyuei" value="{{ $empleado->cursomyuei }}">
@@ -144,7 +175,15 @@
                                                 <input type="date" class="form-control" name="cursomyuef" value="{{ $empleado->cursomyuef }}">
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control" name="ciudadmyue" value="{{ $empleado->ciudadmyue }}">
+                                                <!-- <input type="text" class="form-control" name="ciudadmyue" value="{{ $empleado->ciudadmyue }}"> -->
+                                                <select class="form-control" name="ciudadmyue">
+                                                    <option value="" {{ $empleado->ciudadmyue == '' ? 'selected' : '' }}></option>
+                                                    <option value="Ensenada" {{ $empleado->ciudadmyue == 'Ensenada' ? 'selected' : '' }}>Ensenada</option>
+                                                    <option value="Mexicali" {{ $empleado->ciudadmyue == 'Mexicali' ? 'selected' : '' }}>Mexicali</option>
+                                                    <option value="Rosarito" {{ $empleado->ciudadmyue == 'Rosarito' ? 'selected' : '' }}>Rosarito</option>
+                                                    <option value="Tecate" {{ $empleado->ciudadmyue == 'Tecate' ? 'selected' : '' }}>Tecate</option>
+                                                    <option value="Tijuana" {{ $empleado->ciudadmyue == 'Tijuana' ? 'selected' : '' }}>Tijuana</option>
+                                                </select>
                                             </td>
                                             <td>
                                                 <a href="{{ route('empleados.certificadoME', $empleado->id) }}" style="display: flex; justify-content: left;">
@@ -153,9 +192,13 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                          
+
                                             <td>
-                                                <input type="text" class="form-control" name="cursoeyr" value="{{ $empleado->cursoeyr }}" onmouseout="this.placeholder = 'Ingrese Procedimientos de Evacuacion'">
+                                             <!--    <input type="text" class="form-control" name="cursoeyr" value="{{ $empleado->cursoeyr }}" onmouseout="this.placeholder = 'Ingrese Procedimientos de Evacuacion'"> -->
+                                             <select class="form-control" name="cursoeyr">
+                                                    <option value="" {{ $empleado->cursoeyr == '' ? 'selected' : '' }}></option>
+                                                    <option value="Procedimientos de Evacuacion" {{ $empleado->cursoeyr == 'Procedimientos de Evacuacion' ? 'selected' : '' }}>Procedimientos de Evacuacion</option>
+                                                </select>
                                             </td>
                                             <td>
                                                 <input type="date" class="form-control" name="cursoeyri" value="{{ $empleado->cursoeyri }}">
@@ -164,7 +207,15 @@
                                                 <input type="date" class="form-control" name="cursoeyrf" value="{{ $empleado->cursoeyrf }}">
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control" name="ciudadeyr" value="{{ $empleado->ciudadeyr }}">
+                                                <!--  <input type="text" class="form-control" name="ciudadeyr" value="{{ $empleado->ciudadeyr }}"> -->
+                                                <select class="form-control" name="ciudadeyr">
+                                                    <option value="" {{ $empleado->ciudadeyr == '' ? 'selected' : '' }}></option>
+                                                    <option value="Ensenada" {{ $empleado->ciudadeyr == 'Ensenada' ? 'selected' : '' }}>Ensenada</option>
+                                                    <option value="Mexicali" {{ $empleado->ciudadeyr == 'Mexicali' ? 'selected' : '' }}>Mexicali</option>
+                                                    <option value="Rosarito" {{ $empleado->ciudadeyr == 'Rosarito' ? 'selected' : '' }}>Rosarito</option>
+                                                    <option value="Tecate" {{ $empleado->ciudadeyr == 'Tecate' ? 'selected' : '' }}>Tecate</option>
+                                                    <option value="Tijuana" {{ $empleado->ciudadeyr == 'Tijuana' ? 'selected' : '' }}>Tijuana</option>
+                                                </select>
                                             </td>
                                             <td>
                                                 <a href="{{ route('empleados.certificadoeyr', $empleado->id) }}" style="display: flex; justify-content: left;">

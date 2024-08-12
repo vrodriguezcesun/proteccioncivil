@@ -71,7 +71,7 @@
         .constancia {
             text-align: center;
             color: dimgray;
-            font-size: 55px;
+            font-size: 60px;
             font-weight: bold;
             font-family: Arial, Helvetica, sans-serif;
         }
@@ -233,7 +233,7 @@
 </head>
 
 <body>
-    @foreach ($empleados as $empleado)
+    @foreach ($empleados as $index => $empleado)
     <div class="prueba">
         <div class="contenedor">
             <div class="l1">
@@ -256,7 +256,7 @@
 
         <div class="centro">
             <label class="a">A:</label>
-            <input type="text" class="form-control letra" value="{{ $empleado->nombre }}" name="Name">
+                        <input type="text" class="form-control letra" value="{{ $empleado->nombre }}" name="Name">
         </div>
         <div class="centro">
             <p>Por haber participado y acreditado el curso de Primeros Auxilios, acorde a los programas de capacitación
@@ -264,7 +264,7 @@
                 de {{ $empleado->ciudadpa }} B.C. el día {{ \Carbon\Carbon::parse($empleado->cursopai)->locale('es_ES')->isoFormat('LL') }}.
             </p>
         </div>
-        <br>
+        
         <div>
             <br>
             <br>
@@ -287,8 +287,13 @@
             </div>
         </div>
     </div>
-    <div style="page-break-after: always;"></div> <!-- Añade un salto de página después de cada certificado -->
+    
+    @if ($index < count($empleados) - 1)
+    <div style="page-break-after: always;"></div> <!-- Añade un salto de página solo si no es el último empleado -->
+    @endif
+    
     @endforeach
 </body>
+
 
 </html>

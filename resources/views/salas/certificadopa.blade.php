@@ -238,16 +238,11 @@
         <div class="contenedor">
             <div class="l1">
             <img src="./img/logocaliente2.png" class="rotar-imagen">
-           
-
-
+          
             </div>
-
         </div>
         <br>
-
         <br>
-
         <div class="grupocaliente">
             Grupo Caliente <br>
             Departamento de Protección Civil
@@ -298,5 +293,4 @@
 
     </div>
 </body>
-
 </html>

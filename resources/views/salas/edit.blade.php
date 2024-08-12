@@ -94,7 +94,7 @@
                                                 <input type="text" class="form-control" name="" value="">
                                             </td>
                                             <td>
-                                                <p>Personal Capacitado</p>
+                                                <p>3.1.1 Personal Capacitado</p>
                                             </td>
 
                                             <td>
@@ -110,7 +110,7 @@
                                                 <input type="text" class="form-control" name="" value="">
                                             </td>
                                             <td>
-                                                <p>Directorio de Unidad Interna</p>
+                                                <p>4.1 Directorio de Unidad Interna</p>
                                             </td>
 
                                             <td>
@@ -318,7 +318,7 @@
                                                 <input type="text" class="form-control" name="cantidad" value="{{ $sala->cantidad }}" data-placeholder="Cantidad">
                                             </td>
                                             <td>
-                                                <input type="text" class="form-control" name="descripcion" value="{{ $sala->descripcion }}" placeholder="Descripcion de Detector de Humo">
+                                                <input type="text" class="form-control" name="descripcion" value="{{ $sala->descripcion }}" data-placeholder="Descripcion de Panel de Incendio">
                                             </td>
                                             <td>
                                                 <input type="text" class="form-control" name="marca" value="{{ $sala->marca }}">

@@ -298,10 +298,10 @@ class SalasController extends Controller
             ->setOption('margin-left', '2cm');
 
         // Descarga el PDF con un nombre específico (por ejemplo, el nombre del empleado)
-        return $pdf->setPaper('letter', 'landscape')->stream('Certificado a ' . $sala->nombre . '.pdf');
+        return $pdf->setPaper('letter', 'landscape')->stream('Constancia a ' . $sala->sala . '.pdf');
     }
 
-
+   // generacion de Cosntancias de Personal Capacitado
     public function reportepdf(Request $request, $id)
     {
         // Encuentra la sala por ID o muestra un error si no se encuentra
@@ -332,10 +332,10 @@ class SalasController extends Controller
                   ->setPaper('letter', 'landscape'); // Orientación horizontal
     
         // Envía el PDF al navegador para su descarga o visualización
-        return $pdf->stream('Unidad_Interna_de_Cursos_' . $sala->nombre . '.pdf');
+        return $pdf->stream('Personal capacitado de ' . $sala->sala. '.pdf');
     }
     
-
+   // generacion de Cosntancias de la Unidad Interna
     public function certificadosui(Request $request, $id)
     {
         // Encuentra la sala por ID o muestra un error si no se encuentra
@@ -366,51 +366,50 @@ class SalasController extends Controller
                   ->setPaper('letter', 'landscape'); // Orientación horizontal
     
         // Envía el PDF al navegador para su descarga o visualización
-        return $pdf->stream('reporte_de_Cursos_' . $sala->id . '.pdf');
+        return $pdf->stream('Directorio de Unidad Interna de ' . $sala->sala. '.pdf');
     }
     
-
 
 
     public function certificadosPA(Request $request, $id)
     {
         // Encuentra la sala por ID o muestra un error si no se encuentra
         $sala = Sala::findOrFail($id);
-
+    
         // Obtiene la fecha del request
         $fecha = $request->input('fecha');
-
+    
         // Consulta los empleados que están en la sala específica y tienen el curso "Primeros Auxilios"
         $query = Empleado::where('sala', $sala->nombre)
             ->where('cursopa', 'Primeros Auxilios');
-
+    
         // Si se proporciona una fecha, filtra los empleados por esa fecha
         if ($fecha) {
             $query->whereDate('created_at', $fecha);
         }
-
+    
         // Obtiene los empleados que coinciden con la consulta
         $empleados = $query->get();
-
+    
         // Verifica si hay empleados
         if ($empleados->isEmpty()) {
             return response()->json(['message' => 'No se encontraron empleados para los criterios dados.'], 404);
         }
-
+    
         // Carga la vista para el PDF con los datos necesarios y establece la orientación de la hoja
         $pdf = Pdf::loadView('salas.certificadospa', compact('sala', 'empleados'))
             ->setPaper('letter', 'landscape') // Orientación horizontal
-            ->setOption('margin-top', '2cm')
-            ->setOption('margin-right', '2cm')
-            ->setOption('margin-bottom', '2cm')
-            ->setOption('margin-left', '2cm'); // Personaliza los márgenes
-
+            ->setOption('margin-top', '1.5cm')
+            ->setOption('margin-right', '1.5cm')
+            ->setOption('margin-bottom', '1.5cm')
+            ->setOption('margin-left', '1.5cm'); // Márgenes más pequeños
+    
         // Envía el PDF al navegador para su descarga o visualización
-        return $pdf->stream('constancias_empleados.pdf');
+        return $pdf->stream('Constancias de Primeros Auxilios de '. $sala->sala. '.pdf');
     }
+    
 
-
-
+         // generacion de Cosntancias de Busqueda y rescate
     public function certificadosBYR(Request $request, $id)
     {
         // Encuentra la sala por ID o muestra un error si no se encuentra
@@ -445,9 +444,10 @@ class SalasController extends Controller
             ->setOption('margin-left', '2cm'); // Personaliza los márgenes
 
         // Envía el PDF al navegador para su descarga o visualización
-        return $pdf->stream('constancias_empleados.pdf');
+        return $pdf->stream('Constancias de Busqueda y Rescate de '. $sala->sala. '.pdf');
     }
 
+       // generacion de Cosntancias de uso y Manejo de extintores
     public function certificadosmyue(Request $request, $id)
     {
         // Encuentra la sala por ID o muestra un error si no se encuentra
@@ -482,9 +482,10 @@ class SalasController extends Controller
             ->setOption('margin-left', '2cm'); // Personaliza los márgenes
 
         // Envía el PDF al navegador para su descarga o visualización
-        return $pdf->stream('constancias_empleados.pdf');
+        return $pdf->stream('Constancias de Uso y Manejo de Extintores de '. $sala->sala. '.pdf');
     }
 
+       // generacion de Cosntancias de Procedimientos de evacuacion
     public function certificadoseyr(Request $request, $id)
     {
         // Encuentra la sala por ID o muestra un error si no se encuentra
@@ -519,6 +520,6 @@ class SalasController extends Controller
             ->setOption('margin-left', '2cm'); // Personaliza los márgenes
 
         // Envía el PDF al navegador para su descarga o visualización
-        return $pdf->stream('constancias_empleados.pdf');
+        return $pdf->stream('Constancias de Procedimientos de Evacuacion de '. $sala->sala. '.pdf');
     }
 }

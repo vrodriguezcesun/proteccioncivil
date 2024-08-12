@@ -14,31 +14,42 @@
             text-align: center;
             margin-top: 0px;
         }
+        .header {
+            text-align: center;
+            margin-top: 0px;
+        }
+
+        .header h1 {
+            font-size: 20px;
+            margin: 0;
+            font-weight: normal;
+            /* No bold */
+        }
+
+        .header h2 {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 5px 0;
+        }
 
         .subtitulo {
             text-align: left;
             margin-top: 20px;
         }
-
+        .subtitulo .bold {
+            font-weight: bold;
+            font-weight: normal;
+            /* No bold */
+        }
         .subtitulo h2 {
             font-size: 18px;
             margin: 0;
             margin-left: 200px;
-
         }
 
 
 
-        .header h1 {
-            font-size: 18px;
-            margin: 0;
-        }
-
-        .header h2 {
-            font-size: 16px;
-            font-weight: bold;
-            margin: 5px 0;
-        }
+     
 
         table {
             width: 100%;
@@ -82,8 +93,8 @@
 
     </div>
     <div class="subtitulo">
-        <h2>Organismo/Institucion: {{ $sala->nombre }}</h2>
-        <h2>Domilicio: {{ $sala->direccion }}</h2>
+        <h2><span class="bold">Organismo/Institución:  </span> {{ $sala->sala }}</h2>
+        <h2><span class="bold">Domicilio:  </span>{{ $sala->direccion }}</h2>
     </div>
 
     <table>
