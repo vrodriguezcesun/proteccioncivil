@@ -233,7 +233,7 @@
 </head>
 
 <body>
-    @foreach ($empleados as $empleado)
+@foreach ($empleados as $index => $empleado)
     <div class="prueba">
         <div class="contenedor">
             <div class="l1">
@@ -288,7 +288,9 @@
             </div>
         </div>
     </div>
-    <div style="page-break-after: always;"></div> <!-- Añade un salto de página después de cada certificado -->
+    @if ($index < count($empleados) - 1)
+    <div style="page-break-after: always;"></div> <!-- Añade un salto de página solo si no es el último empleado -->
+    @endif
     @endforeach
 </body>
 
