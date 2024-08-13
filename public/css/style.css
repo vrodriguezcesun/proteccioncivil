@@ -1294,3 +1294,6 @@ h6 {
 .col-descripcion {
   width: 450px; /* Ajusta este valor según lo que necesites */
 }
+.placeholder-option {
+  color: #d62222;
+}
