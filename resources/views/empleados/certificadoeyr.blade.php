@@ -78,7 +78,7 @@
         .constancia {
             text-align: center;
             color: dimgray;
-            font-size: 55px;
+            font-size: 60px;
             font-weight: bold;
             font-family: Arial, Helvetica, sans-serif;
         }
@@ -119,7 +119,7 @@
         }
 
         .centro {
-            
+
             margin-left: 0px;
             margin-bottom: 0px;
             padding: 0px;
@@ -128,11 +128,14 @@
 
         .letra {
             font-family: Arial, sans-serif;
-    font-weight: bold;
-    font-size: 50px;
-    white-space: nowrap; /* Evita que el texto se divida en múltiples líneas */
-    overflow: hidden; /* Oculta el texto que desborda el contenedor */
-    text-overflow: ellipsis; /* Muestra puntos suspensivos (...) para indicar texto truncado */
+            font-weight: bold;
+            font-size: 50px;
+            white-space: nowrap;
+            /* Evita que el texto se divida en múltiples líneas */
+            overflow: hidden;
+            /* Oculta el texto que desborda el contenedor */
+            text-overflow: ellipsis;
+            /* Muestra puntos suspensivos (...) para indicar texto truncado */
         }
 
 
@@ -151,6 +154,7 @@
             line-height: 1.1;
             /* Ajusta el valor según sea necesario, un valor menor reducirá el espacio entre líneas */
             font-family: Arial, sans-serif;
+            font-size: 27px;
 
 
         }
@@ -224,8 +228,8 @@
             margin: 0px;
             padding: 0 0 0 0;
             z-index: 0;
-            top: 0px;
-            /* Ajusta este valor según sea necesario */
+            top: -20px;
+            /* Ajusta este valor para acercar la línea al texto */
 
         }
 
@@ -271,25 +275,28 @@
             CONSTANCIA
         </div>
         <br>
-        <br>
+
         <div class="centro">
             <label class="a">A:</label>
             <input type="text" class="form-control letra" value="{{ $empleado->nombre }} {{ $empleado->apellido }}" name="Name">
         </div>
         <div class="centro">
-            <p>Por haber participado y acreditado el curso de Procedimientos de Evacuación, acorde a los programas de capacitación
+            <p>Por haber participado y acreditado el curso de Procedimientos de Evacuación, Resguardo, Señales y Avisos de Protección Civil y STPS, acorde a los programas de capacitación
                 incorporados a la Dirección Estatal de Protección Civil en B.C., la Secretaria del Trabajo y Previsión Social, impartido en la Ciudad
                 de {{$empleado->ciudadeyr}}, B.C. el día {{ \Carbon\Carbon::parse($empleado->cursoeyri)->locale('es_ES')->isoFormat('LL') }}
 
                 .</p>
         </div>
         <br>
+        <br>
+        <br>
+      
 
         <div>
 
-        <div class="centrado">
+            <div class="centrado">
                 <div style="position: relative;">
-                 <!-- <img src="./img/firma2.jpg" style="position: absolute; top: 5%; left: 50%; transform: translate(-50%, -50%);"> -->
+                    <!-- <img src="./img/firma2.jpg" style="position: absolute; top: 5%; left: 50%; transform: translate(-50%, -50%);"> -->
                     <p class="centrado letra" style="position: relative; z-index: 1;">Octavio Méndez Stoever</p>
                 </div>
             </div>
@@ -305,7 +312,7 @@
 
             <div class="centrado" style="position: relative;">
                 <div class="l2"></div>
-               
+
             </div>
         </div>
     </div>

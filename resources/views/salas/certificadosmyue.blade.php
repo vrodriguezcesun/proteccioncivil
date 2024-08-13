@@ -144,6 +144,7 @@
             line-height: 1.1;
             /* Ajusta el valor según sea necesario, un valor menor reducirá el espacio entre líneas */
             font-family: Arial, sans-serif;
+            font-size: 27px;
         }
 
         .letra {
@@ -212,7 +213,7 @@
             margin: 0px;
             padding: 0 0 0 0;
             z-index: 0;
-            top: 0px;
+            top: -20px;
             /* Ajusta este valor según sea necesario */
         }
 
@@ -262,12 +263,13 @@
             <input type="text" class="form-control letra" value="{{ $empleado->nombre }}" name="Name">
         </div>
         <div class="centro">
-            <p>Por haber participado y acreditado el curso de Prevención y Extinción de Incendios (Uso y Manejo de Extintores), acorde a los programas de capacitación
+            <p>Por haber participado y acreditado el curso de Prevención y Extinción de Incendios (uso y manejo de extintores), acorde a los programas de capacitación
                 incorporados a la Dirección de Bomberos del Municipio y la Secretaria del Trabajo y Previsión Social, impartido en la Ciudad
                 de {{$empleado->ciudadmyue}}, B.C. el día {{ \Carbon\Carbon::parse($empleado->cursomyuei)->locale('es_ES')->isoFormat('LL') }}
 
                 .</p>
         </div>
+        <br>
         <br>
         <div>
             <br>

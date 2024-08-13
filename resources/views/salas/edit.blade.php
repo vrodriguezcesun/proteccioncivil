@@ -65,7 +65,6 @@
                                 <table class="table ml-2">
                                     <thead>
                                         <tr>
-
                                             <th>Año</th>
                                             <th>Descripción de Cosntancias</th>
                                             <th>Constancias</th>
@@ -367,8 +366,8 @@
                                             </td>
                                             <td>
                                                 <!-- <input type="text" class="form-control" name="descripciondet" value="{{ $sala->descripciondet }}" data-placeholder="Descripcion de Detector Humo"> -->
-                                                   <select class="form-control" name="descripciondet">
-                                                   <option value="" {{ $sala->descripciondet == null ? 'selected' : '' }} style="color: #9999;">Seleccione detector Humo</option>
+                                                <select class="form-control" name="descripciondet">
+                                                    <option value="" {{ $sala->descripciondet == null ? 'selected' : '' }} style="color: #9999;">Seleccione detector Humo</option>
 
                                                     <option value="Detector de Humo Fotoelectrico" {{ $sala->descripciondet == 'Detector de Humo Fotoelectrico' ? 'selected' : '' }}>Detector de Humo Fotolectrico</option>
                                                 </select>
@@ -419,8 +418,8 @@
 
                                             </td>
                                             <td>
-                                               <!--  <input type="text" class="form-control" name="marcaterm" value="{{ $sala->marcaterm }}" data-placeholder="Marca"> -->
-                                               <select class="form-control" name="marcaterm">
+                                                <!--  <input type="text" class="form-control" name="marcaterm" value="{{ $sala->marcaterm }}" data-placeholder="Marca"> -->
+                                                <select class="form-control" name="marcaterm">
                                                     <option value="" {{ $sala->marcaterm == '' ? 'selected' : '' }}></option>
                                                     <option value="Firelite" {{ $sala->marcaterm == 'Firelite' ? 'selected' : '' }}>Firelite</option>
                                                     <option value="Honeywell" {{ $sala->marcaterm == 'Honeywell' ? 'selected' : '' }}>Honeywell</option>
@@ -431,16 +430,16 @@
 
                                             </td>
                                             <td>
-                                              <!--   <input type="text" class="form-control" name="modeloterm" value="{{ $sala->modeloterm }}" data-placeholder="Modelo"> -->
-                                              <select class="form-control" name="modeloterm"">
+                                                <!--   <input type="text" class="form-control" name="modeloterm" value="{{ $sala->modeloterm }}" data-placeholder="Modelo"> -->
+                                                <select class="form-control" name="modeloterm"">
                                                     <option value="" {{ $sala->modeloterm == '' ? 'selected' : '' }}></option>
-                                                    <option value="H-365" {{ $sala->modeloterm == 'H-365' ? 'selected' : '' }}>H-365</option>
+                                                    <option value=" H-365" {{ $sala->modeloterm == 'H-365' ? 'selected' : '' }}>H-365</option>
                                                     <option value="SD-365T" {{ $sala->modeloterm == 'SD-365T' ? 'selected' : '' }}>SD-365T</option>
                                                     <option value="H365-IV" {{ $sala->modeloterm == 'H365-IV' ? 'selected' : '' }}>H365-IV</option>
                                                     <option value="SKHEATW" {{ $sala->modeloterm == 'SKHEATW' ? 'selected' : '' }}>SKHEATW</option>
                                                     <option value="SKPHOTOT" {{ $sala->modeloterm == 'SKPHOTOT' ? 'selected' : '' }}>SKPHOTOT</option>
                                                     <option value="SKPHOTOTW" {{ $sala->modeloterm == 'SKPHOTOTW' ? 'selected' : '' }}>SKPHOTOTW</option>
-                                               </select>
+                                                </select>
                                             </td>
                                             <td>
                                                 <a href="" style="display: flex; justify-content: left;">

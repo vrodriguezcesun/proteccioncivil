@@ -71,7 +71,7 @@
         .constancia {
             text-align: center;
             color: dimgray;
-            font-size: 55px;
+            font-size: 60px;
             font-weight: bold;
             font-family: Arial, Helvetica, sans-serif;
         }
@@ -147,6 +147,7 @@
             line-height: 1.1;
             /* Ajusta el valor según sea necesario, un valor menor reducirá el espacio entre líneas */
             font-family: Arial, sans-serif;
+            font-size: 27px;
         }
 
         .letra {
@@ -215,8 +216,8 @@
             margin: 0px;
             padding: 0 0 0 0;
             z-index: 0;
-            top: 0px;
-            /* Ajusta este valor según sea necesario */
+            top: -20px;
+            /* Ajusta este valor para acercar la línea al texto */
         }
 
         .rotar-imagen {
@@ -265,14 +266,16 @@
             <input type="text" class="form-control letra" value="{{ $empleado->nombre }}" name="Name" readonly>
         </div>
         <div class="centro">
-            <p>Por haber participado y acreditado el curso de Procedimientos de Evacuación, acorde a los programas de capacitación
-                incorporados a la Dirección Estatal de Protección Civil en B.C., la Secretaria del Trabajo y Previsión Social, impartido en la Ciudad
+            <p>Por haber participado y acreditado el curso de Procedimientos de Evacuación, Resguardo, Señales y Avisos de Protección Civil y STPS, acorde a los 
+                programas de capacitación incorporados a la Dirección Estatal de Protección Civil en B.C., la Secretaria del Trabajo y Previsión Social, impartido en la Ciudad
                 de {{$empleado->ciudadeyr}}, B.C. el día {{ \Carbon\Carbon::parse($empleado->cursoeyri)->locale('es_ES')->isoFormat('LL') }}
 
                 .</p>
         </div>
+        <br>
+        <br>
     </div>
-    <br>
+    
     <div>
         <br>
 
