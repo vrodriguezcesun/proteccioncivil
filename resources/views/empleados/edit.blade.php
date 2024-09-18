@@ -71,6 +71,24 @@
                                         </select>
                                     </div>
                                 </div>
+                                <div class="form-group col-md-5">
+                                    <div class="col-sm-12 pl-0 pr-0">
+                                        <label for="" class="col-sm-12 pl-0 pr-0">Empresa</label>
+                                        <input type="text" class="form-control" name="empresa" value="{{ $empleado->empresa }}">
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <div class="col-sm-12 pl-0 pr-0">
+                                        <label for="" class="col-sm-12 pl-0 pr-0">RFC</label>
+                                        <input type="text" class="form-control" name="rfc" value="{{ $empleado->rfc }}">
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-5">
+                                    <div class="col-sm-12 pl-0 pr-0">
+                                        <label for="" class="col-sm-12 pl-0 pr-0">Registro patronal IMSS</label>
+                                        <input type="text" class="form-control" name="imss" value="{{ $empleado->imss }}">
+                                    </div>
+                                </div>
                             </div>
                             <div class="modal-header">
                                 <h3 class="modal-title" style="float: left;">Información de Capacitaciones</h3>
@@ -223,6 +241,26 @@
                                                 </a>
                                             </td>
                                         </tr>
+                                        <tr>
+    <td>
+        Constancia de DC3
+    </td>
+    <td>
+        <!-- No es necesario un campo de fecha para esta constancia -->
+    </td>
+    <td>
+        <!-- No es necesario un campo de fecha para esta constancia -->
+    </td>
+    <td>
+        <!-- No es necesario un campo de ciudad para esta constancia -->
+    </td>
+    <td>
+        <!-- Agrega el enlace para generar el PDF de la constancia -->
+        <a href="{{ route('empleados.dc3', $empleado->id) }}" style="display: flex; justify-content: left;">
+            <i class="bx bxs-file-pdf bx-md" style="color: red; font-size: 10px;"></i>
+        </a>
+    </td>
+</tr>
 
                                     </tbody>
                                 </table>

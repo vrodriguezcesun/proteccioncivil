@@ -40,6 +40,8 @@ Route::get('empleados/{id}/certificadoME', [EmpleadoController::class, 'generate
 Route::get('empleados/{id}/certificadobyr', [EmpleadoController::class, 'generateCertificatebyr'])->name('empleados.certificadobyr');
 Route::get('empleados/{id}/certificadoeyr', [EmpleadoController::class, 'generateCertificateeyr'])->name('empleados.certificadoeyr');
 Route::get('/generar-certificado-pdf', [EmpleadoController::class, 'generarCertificado'])->name('empleados.generarcertificado');
+Route::get('/empleados/{id}/dc3', [EmpleadoController::class, 'generateConstanciaPDF'])->name('empleados.dc3');
+
 
 
 

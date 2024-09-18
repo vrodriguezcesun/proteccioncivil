@@ -66,6 +66,9 @@ class EmpleadoController extends Controller
             'email' => 'nullable|string',
             'curp' => 'nullable|string',
             'telefono' => 'nullable|string',
+            'empresa' => 'nullable|string',
+            'rfc' => 'nullable|string',
+            'imss' => 'nullable|string',
             'cursopa' => 'nullable|string',
             'cursopai' => 'nullable|string',
             'cursopaf' => 'nullable|string',
@@ -94,6 +97,9 @@ class EmpleadoController extends Controller
         $empleado->email = $request->email;
         $empleado->curp = $request->curp;
         $empleado->telefono = $request->telefono;
+        $empleado->empresa = $request->empresa;
+        $empleado->rfc = $request->rfc;
+        $empleado->imss = $request->imss;
         $empleado->cursopa = $request->cursopa;
         $empleado->cursopai = $request->cursopai;
         $empleado->cursopaf = $request->cursopaf;
@@ -216,6 +222,9 @@ class EmpleadoController extends Controller
             'email' => 'nullable|string',
             'curp' => 'nullable|string',
             'telefono' => 'nullable|string',
+            'empresa' => 'nullable|string',
+            'rfc' => 'nullable|string',
+            'imss' => 'nullable|string',
             'cursopa' => 'nullable|string',
             'cursopai' => 'nullable|string',
             'cursopaf' => 'nullable|string',
@@ -254,6 +263,9 @@ class EmpleadoController extends Controller
             'email' => $request->email,
             'curp' => $request->curp,
             'telefono' => $request->telefono,
+            'empresa' => $request->empresa,
+            'rfc' => $request->rfc,
+            'imss' => $request->imss,
             'cursopa' => $request->cursopa,
             'cursopai' => $request->cursopai,
             'cursopaf' => $request->cursopaf,
@@ -409,6 +421,32 @@ class EmpleadoController extends Controller
         // Descarga el PDF con un nombre específico (por ejemplo, el nombre del empleado)
         return $pdf->setPaper('letter', 'landscape')->stream('Certificado Evacuacion y Rescate ' . $empleado->nombre . ' ' . $empleado->apellido . '.pdf');
     }
+////Funcion para Generar DC3////////////////////////////////
+    public function generateConstanciaPDF($id)
+{
+    // Obtén los datos del empleado según el ID
+    $empleado = Empleado::findOrFail($id);
+
+    // Configura el idioma local de Carbon a español
+    Carbon::setLocale('es_ES');
+
+    // Crea el PDF usando la vista Blade 'empleados.constancia' y pasa los datos del empleado
+    $pdf = PDF::loadView('empleados.dc3', compact('empleado'));
+
+    // Restablece el idioma local de Carbon al valor predeterminado (opcional, dependiendo de tus necesidades)
+    Carbon::setLocale(config('app.locale'));
+
+    // Personaliza los márgenes
+    $pdf->setPaper('letter', 'portrait')
+        ->setOption('margin-top', '1cm')
+        ->setOption('margin-right', '2cm')
+        ->setOption('margin-bottom', '2cm')
+        ->setOption('margin-left', '2cm');
+
+    // Descarga o muestra el PDF en el navegador con un nombre específico
+    return $pdf->stream('Constancia ' . $empleado->nombre . '.pdf');
+}
+
 
 
 

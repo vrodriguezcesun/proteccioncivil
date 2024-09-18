@@ -189,7 +189,7 @@
                             </div>
                             <div class="row g-1 ml-2">
                                 <div class="form-check form-check-inline col-3 mr-0 px-0">
-                                    <input class="form-check-input" type="checkbox" name="cursoeyr" value="Evacuacion y Rescate">
+                                    <input class="form-check-input" type="checkbox" name="cursoeyr" value="Procedimientos de Evacuacion">
                                     <label class="form-check-label">Procedimientos de Evacuación</label>
                                 </div>
                                 <div class="form-group col-md-3 ml-0">

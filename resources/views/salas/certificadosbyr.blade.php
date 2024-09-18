@@ -212,7 +212,7 @@
             margin: 0px;
             padding: 0 0 0 0;
             z-index: 0;
-            top: 0px;
+            top: -20px;
             /* Ajusta este valor según sea necesario */
         }
 
