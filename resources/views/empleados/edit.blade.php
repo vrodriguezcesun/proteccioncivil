@@ -109,13 +109,15 @@
                                         <tr>
 
                                             <td>
-                                                <!--  <input type="text" class="form-control" name="cursopa" value="{{ $empleado->cursopa }}" onmouseout="this.placeholder = 'Ingrese Primeros Auxilios'"> -->
-                                                <select class="form-control" name="cursopa">
-                                                    <option value="" {{ $empleado->cursopa == '' ? 'selected' : '' }}></option>
-                                                    <option value="Primeros Auxilios" {{ $empleado->cursopa == 'Primeros Auxilios' ? 'selected' : '' }}>Primeros Auxilios</option>
-                                                </select>
-
+                                                <div class="form-group">
+                                                    <label for="cursopa" class="floating-label">Primeros Auxilios</label>
+                                                    <select class="form-control" id="cursopa" name="cursopa">
+                                                        <option value="" {{ $empleado->cursopa == '' ? 'selected' : '' }}></option>
+                                                        <option value="Primeros Auxilios" {{ $empleado->cursopa == 'Primeros Auxilios' ? 'selected' : '' }}>Primeros Auxilios</option>
+                                                    </select>
+                                                </div>
                                             </td>
+
                                             <td>
                                                 <input type="date" class="form-control" name="cursopai" value="{{ $empleado->cursopai }}">
                                             </td>
@@ -135,23 +137,31 @@
                                                 </select>
                                             </td>
 
-                                            <td>
-                                                <a href="{{ route('empleados.certificado', $empleado->id) }}" style="display: flex; justify-content: left;">
+                                            <td style="display: flex; justify-content: space-between; gap: 10px;">
+                                                <a href="{{ route('empleados.certificado', $empleado->id) }}" style="display: flex;">
                                                     <i class="bx bxs-file-pdf bx-md" style="color: red; font-size: 10px;"></i>
                                                 </a>
+                                                <a href="{{ route('empleados.dc3', $empleado->id) }}" style="display: flex;">
+                                                    <i class="bx bxs-file-pdf bx-md" style="color: blue; font-size: 10px;"></i>
+                                                </a>
                                             </td>
+
+
 
                                         </tr>
 
                                         <tr>
 
                                             <td>
-                                                <!-- <input type="text" class="form-control" name="cursobyr" value="{{ $empleado->cursobyr }}" onmouseout="this.placeholder = 'Ingrese Busqueda y Rescate'"> -->
-                                                <select class="form-control" name="cursobyr">
-                                                    <option value="" {{ $empleado->cursobyr == '' ? 'selected' : '' }}></option>
-                                                    <option value="Busqueda y Rescate" {{ $empleado->cursobyr == 'Busqueda y Rescate' ? 'selected' : '' }}>Busqueda y Rescate</option>
-                                                </select>
+                                                <div class="form-group">
+                                                    <label for="cursobyr" class="floating-label">Búsqueda y Rescate</label>
+                                                    <select class="form-control" id="cursobyr" name="cursobyr">
+                                                        <option value="" {{ $empleado->cursobyr == '' ? 'selected' : '' }}></option>
+                                                        <option value="Busqueda y Rescate" {{ $empleado->cursobyr == 'Busqueda y Rescate' ? 'selected' : '' }}>Búsqueda y Rescate</option>
+                                                    </select>
+                                                </div>
                                             </td>
+
                                             <td>
                                                 <input type="date" class="form-control" name="cursobyri" value="{{ $empleado->cursobyri }}">
                                             </td>
@@ -180,12 +190,15 @@
                                         <tr>
 
                                             <td>
-                                               <!--  <input type="text" class="form-control" name="cursomyue" value="{{ $empleado->cursomyue }}" onmouseout="this.placeholder = 'Ingrese Uso y Manejo de Extintores'"> -->
-                                               <select class="form-control" name="cursomyue">
-                                                    <option value="" {{ $empleado->cursomyue == '' ? 'selected' : '' }}></option>
-                                                    <option value="Uso y Manejo de Extintores" {{ $empleado->cursomyue == 'Uso y Manejo de Extintores' ? 'selected' : '' }}>Uso y Manejo de Extintores</option>
-                                                </select>
+                                                <div class="form-group">
+                                                    <label for="cursomyue" class="floating-label">Uso y Manejo de Extintores</label>
+                                                    <select class="form-control" id="cursomyue" name="cursomyue">
+                                                        <option value="" {{ $empleado->cursomyue == '' ? 'selected' : '' }}></option>
+                                                        <option value="Uso y Manejo de Extintores" {{ $empleado->cursomyue == 'Uso y Manejo de Extintores' ? 'selected' : '' }}>Uso y Manejo de Extintores</option>
+                                                    </select>
+                                                </div>
                                             </td>
+
                                             <td>
                                                 <input type="date" class="form-control" name="cursomyuei" value="{{ $empleado->cursomyuei }}">
                                             </td>
@@ -212,12 +225,15 @@
                                         <tr>
 
                                             <td>
-                                             <!--    <input type="text" class="form-control" name="cursoeyr" value="{{ $empleado->cursoeyr }}" onmouseout="this.placeholder = 'Ingrese Procedimientos de Evacuacion'"> -->
-                                             <select class="form-control" name="cursoeyr">
-                                                    <option value="" {{ $empleado->cursoeyr == '' ? 'selected' : '' }}></option>
-                                                    <option value="Procedimientos de Evacuacion" {{ $empleado->cursoeyr == 'Procedimientos de Evacuacion' ? 'selected' : '' }}>Procedimientos de Evacuacion</option>
-                                                </select>
+                                                <div class="form-group">
+                                                    <label for="cursoeyr" class="floating-label">Procedimientos de Evacuación</label>
+                                                    <select class="form-control" id="cursoeyr" name="cursoeyr">
+                                                        <option value="" {{ $empleado->cursoeyr == '' ? 'selected' : '' }}></option>
+                                                        <option value="Procedimientos de Evacuacion" {{ $empleado->cursoeyr == 'Procedimientos de Evacuacion' ? 'selected' : '' }}>Procedimientos de Evacuación</option>
+                                                    </select>
+                                                </div>
                                             </td>
+
                                             <td>
                                                 <input type="date" class="form-control" name="cursoeyri" value="{{ $empleado->cursoeyri }}">
                                             </td>
@@ -242,25 +258,25 @@
                                             </td>
                                         </tr>
                                         <tr>
-    <td>
-        Constancia de DC3
-    </td>
-    <td>
-        <!-- No es necesario un campo de fecha para esta constancia -->
-    </td>
-    <td>
-        <!-- No es necesario un campo de fecha para esta constancia -->
-    </td>
-    <td>
-        <!-- No es necesario un campo de ciudad para esta constancia -->
-    </td>
-    <td>
-        <!-- Agrega el enlace para generar el PDF de la constancia -->
-        <a href="{{ route('empleados.dc3', $empleado->id) }}" style="display: flex; justify-content: left;">
-            <i class="bx bxs-file-pdf bx-md" style="color: red; font-size: 10px;"></i>
-        </a>
-    </td>
-</tr>
+                                            <td>
+                                                Constancia de DC3
+                                            </td>
+                                            <td>
+                                                <!-- No es necesario un campo de fecha para esta constancia -->
+                                            </td>
+                                            <td>
+                                                <!-- No es necesario un campo de fecha para esta constancia -->
+                                            </td>
+                                            <td>
+                                                <!-- No es necesario un campo de ciudad para esta constancia -->
+                                            </td>
+                                            <td>
+                                                <!-- Agrega el enlace para generar el PDF de la constancia -->
+                                                <a href="{{ route('empleados.dc3', $empleado->id) }}" style="display: flex; justify-content: left;">
+                                                    <i class="bx bxs-file-pdf bx-md" style="color: red; font-size: 10px;"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
 
                                     </tbody>
                                 </table>

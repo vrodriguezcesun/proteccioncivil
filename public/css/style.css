@@ -1297,3 +1297,30 @@ h6 {
 .placeholder-option {
   color: #d62222;
 }
+.form-group {
+  position: relative;
+  margin-top: 0px; /* Ajusta según sea necesario */
+}
+
+.floating-label {
+  position: absolute;
+  top: -10px; /* Ajusta la posición encima del input/select */
+  left: 10px;
+  font-size: 12px;
+  background-color: white;
+  padding: 0 5px;
+  color: gray;
+  transition: all 0.3s ease;
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px 12px;
+}
+
+.form-control:focus + .floating-label,
+.form-control:not(:placeholder-shown) + .floating-label {
+  top: -20px; /* Sube la etiqueta cuando el select está enfocado o tiene valor */
+  font-size: 10px;
+  color: blue; /* Cambia el color si quieres cuando esté activo */
+}

@@ -847,7 +847,7 @@
         }
 
         .registroimss {
-          /*   background-color: yellow; */
+            /*   background-color: yellow; */
             width: 723px;
             height: 32px;
             border-left: black 1px solid;
@@ -856,22 +856,30 @@
         }
 
         .rfc {
-                       width: 360px;
+            width: 360px;
             height: 32px;
             float: left;
             border-right: black 1px solid;
         }
+        .rfc2 {
+            width: 360px;
+            height: 32px;
+            float: left;
+           
+        }
+
 
         .registro {
-           padding-left: 5px;
+            padding-left: 5px;
             width: 360px;
             height: 15px;
             text-align: left;
             font-size: 10px;
             color: #333;
         }
+
         .registro1 {
-           
+
             width: 350px;
             height: 15px;
             text-align: left;
@@ -880,10 +888,12 @@
             padding-left: 10px;
             text-align: justify;
         }
-        .separar{
-            margin-left: 15px;
-        }
 
+        .separar {
+            margin-left: 5px;
+            letter-spacing: 0.7px; /* Aumenta el espacio entre las letras */
+            word-spacing: 0.7px; /* Aumenta el espacio entre las barras '|' */
+        }
     </style>
 
 </head>
@@ -935,18 +945,18 @@
         <div class="registroimss">
             <div class="rfc">
                 <div class="registro">
-                    <span>Registro Federal de Controbuyentes con homoclave (SHCP)</span>
+                    <span>Registro Federal de Contribuyentes con homoclave (SHCP)</span>
                 </div>
                 <div class="registro1">
-                <span class="separar">{{ implode(' | ', str_split($empleado->rfc, 1))}}</span>
+                    <span class="separar">{{ implode(' | ', str_split($empleado->rfc, 1))}}</span>
                 </div>
             </div>
-            <div class="rfc">
+            <div class="rfc2">
                 <div class="registro">
                     <span>Registro Patronal ante el IMSS</span>
                 </div>
                 <div class="registro1">
-                <span class="separar">{{ implode(' | ', str_split($empleado->imss, 1))}}</span>
+                    <span class="separar">{{ implode(' | ', str_split($empleado->imss, 1))}}</span>
                 </div>
             </div>
         </div>
@@ -1003,7 +1013,7 @@
             Nombre del curso
         </div>
         <div class="bordedt">
-            Uso de Extintores
+        {{$empleado->cursopa}}
         </div>
 
         <div class="contenedor">
